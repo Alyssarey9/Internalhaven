@@ -1,136 +1,356 @@
-import Link from 'next/link';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import { FiArrowRight } from 'react-icons/fi';
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
+  const [activeModal, setActiveModal] = useState(null);
+
+  const closeModal = () => setActiveModal(null);
+
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-12 md:pb-24 lg:pt-32 lg:pb-32 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl dark:text-white">
-              <span className="block">Discover Your</span>
-              <span className="block text-blue-600 dark:text-blue-400">Internal Haven</span>
-            </h1>
-            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl dark:text-gray-300">
-              Professional life coaching to help you navigate life's challenges, discover your purpose, and achieve your personal and professional goals.
-            </p>
-            <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div className="rounded-md shadow">
-                <Link href="/contact" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 dark:bg-blue-500 dark:hover:bg-blue-600">
-                  Get Started
-                </Link>
-              </div>
-              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <Link href="/services" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700">
-                  Our Services
-                </Link>
-              </div>
-            </div>
+    <main className="relative min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <div className="fixed inset-0 z-0">
+        <Image
+          src="/bg.jpg"
+          alt="Background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-gray-900/40 to-gray-900/60" />
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
+        {/* Logo */}
+        <div className="mb-8">
+          <div className="w-20 h-20 rounded-full border-2 border-white/40 flex items-center justify-center bg-white/10 backdrop-blur-sm">
+            <svg
+              viewBox="0 0 24 24"
+              className="w-10 h-10 text-white"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L2 7L12 12L22 7L12 2Z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M2 17L12 22L22 17"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M2 12L12 17L22 12"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
         </div>
-      </section>
-      
-      {/* Features Section */}
-      <section className="py-12 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center">
-            <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase dark:text-blue-400">Our Approach</h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-              Transform Your Life
-            </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:text-gray-300">
-              We provide personalized coaching to help you overcome obstacles and achieve your full potential.
-            </p>
-          </div>
 
-          <div className="mt-10">
-            <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-              <div className="relative">
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                  <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </div>
-                <div className="ml-16">
-                  <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">Personal Growth</h3>
-                  <p className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                    Discover your authentic self and develop strategies to overcome limiting beliefs.
-                  </p>
-                </div>
-              </div>
+        {/* Title and Subtitle */}
+        <div className="text-center mb-16 max-w-3xl">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-widest">
+            INTERNAL HAVEN
+          </h1>
+          <p className="text-white/80 text-sm md:text-base tracking-wider leading-relaxed uppercase">
+            A Professional Life Coaching Service to Help You Navigate Life's Challenges, 
+            Discover Your Purpose, and Achieve Your Goals.
+          </p>
+        </div>
 
-              <div className="relative">
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                  <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div className="ml-16">
-                  <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">Career Advancement</h3>
-                  <p className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                    Navigate career transitions and achieve your professional goals with confidence.
-                  </p>
-                </div>
-              </div>
+        {/* Navigation Buttons */}
+        <div className="flex flex-wrap justify-center gap-4">
+          <button
+            onClick={() => setActiveModal('intro')}
+            className="px-8 py-3 border border-white/30 text-white text-sm tracking-widest 
+                     hover:bg-white hover:text-gray-900 transition-all duration-300 
+                     backdrop-blur-sm uppercase"
+          >
+            Intro
+          </button>
+          <button
+            onClick={() => setActiveModal('work')}
+            className="px-8 py-3 border border-white/30 text-white text-sm tracking-widest 
+                     hover:bg-white hover:text-gray-900 transition-all duration-300 
+                     backdrop-blur-sm uppercase"
+          >
+            Services
+          </button>
+          <button
+            onClick={() => setActiveModal('about')}
+            className="px-8 py-3 border border-white/30 text-white text-sm tracking-widest 
+                     hover:bg-white hover:text-gray-900 transition-all duration-300 
+                     backdrop-blur-sm uppercase"
+          >
+            About
+          </button>
+          <button
+            onClick={() => setActiveModal('contact')}
+            className="px-8 py-3 border border-white/30 text-white text-sm tracking-widest 
+                     hover:bg-white hover:text-gray-900 transition-all duration-300 
+                     backdrop-blur-sm uppercase"
+          >
+            Contact
+          </button>
+        </div>
 
-              <div className="relative">
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                  <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <div className="ml-16">
-                  <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">Relationship Building</h3>
-                  <p className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                    Develop healthy communication skills and strengthen your personal and professional relationships.
-                  </p>
-                </div>
-              </div>
+        {/* Footer */}
+        <div className="absolute bottom-8 left-0 right-0 text-center">
+          <p className="text-white/50 text-xs tracking-wider uppercase">
+            © Internal Haven. Design: Dimension
+          </p>
+        </div>
+      </div>
 
-              <div className="relative">
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                  <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                </div>
-                <div className="ml-16">
-                  <h3 className="text-lg leading-6 font-medium text-gray-900 dark:text-white">Life Balance</h3>
-                  <p className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                    Create harmony between your personal and professional life for greater fulfillment and well-being.
-                  </p>
-                </div>
-              </div>
-            </div>
+      {/* Modals */}
+      {activeModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-gray-900/80 backdrop-blur-sm"
+            onClick={closeModal}
+          />
+
+          {/* Modal Content */}
+          <div className="relative bg-gray-900/95 backdrop-blur-md text-white max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl">
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-6 right-6 text-white/60 hover:text-white text-3xl"
+            >
+              ×
+            </button>
+
+            {/* Modal Content Based on Active Modal */}
+            {activeModal === 'intro' && <IntroModal />}
+            {activeModal === 'work' && <WorkModal />}
+            {activeModal === 'about' && <AboutModal />}
+            {activeModal === 'contact' && <ContactModal />}
           </div>
         </div>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="bg-blue-600 dark:bg-blue-800">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            <span className="block">Ready to transform your life?</span>
-            <span className="block text-blue-200">Book your free consultation today.</span>
-          </h2>
-          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-            <div className="inline-flex rounded-md shadow">
-              <Link href="/contact" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 dark:text-white dark:bg-blue-900 dark:hover:bg-blue-700">
-                Get Started
-                <FiArrowRight className="ml-2 -mr-1 h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Footer */}
-      <Footer />
+      )}
     </main>
   );
-} 
+}
+
+// Modal Components
+function IntroModal() {
+  return (
+    <div className="p-12">
+      <h2 className="text-3xl font-bold mb-4 tracking-widest">INTRO</h2>
+      <div className="w-24 h-1 bg-white mb-8"></div>
+      
+      <div className="mb-8">
+        <Image
+          src="/pic01.jpg"
+          alt="Life Coaching"
+          width={600}
+          height={300}
+          className="w-full h-64 object-cover rounded"
+        />
+      </div>
+
+      <div className="space-y-4 text-gray-300">
+        <p>
+          Welcome to Internal Haven, where transformation begins from within. Our professional 
+          life coaching services are designed to help you navigate life's challenges, discover 
+          your true purpose, and achieve lasting personal and professional growth.
+        </p>
+        <p>
+          We believe that everyone has the potential for greatness within them. Sometimes, 
+          all it takes is the right guidance, support, and tools to unlock that potential. 
+          Our coaching approach is holistic, addressing all aspects of your life to create 
+          sustainable change and meaningful results.
+        </p>
+        <p>
+          Whether you're seeking career advancement, personal growth, better relationships, 
+          or simply a more balanced life, we're here to support you on your journey. 
+          Let's work together to create the life you've always envisioned.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function WorkModal() {
+  return (
+    <div className="p-12">
+      <h2 className="text-3xl font-bold mb-4 tracking-widest">SERVICES</h2>
+      <div className="w-24 h-1 bg-white mb-8"></div>
+      
+      <div className="mb-8">
+        <Image
+          src="/pic02.jpg"
+          alt="Our Services"
+          width={600}
+          height={300}
+          className="w-full h-64 object-cover rounded"
+        />
+      </div>
+
+      <div className="space-y-6 text-gray-300">
+        <div>
+          <h3 className="text-xl font-semibold mb-2 text-white">Personal Growth Coaching</h3>
+          <p>
+            Discover your authentic self and develop strategies to overcome limiting beliefs. 
+            We'll work together to identify your core values, strengths, and areas for growth.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-2 text-white">Career Advancement</h3>
+          <p>
+            Navigate career transitions and achieve your professional goals with confidence. 
+            From career pivots to leadership development, we'll create a roadmap for success.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-2 text-white">Relationship Building</h3>
+          <p>
+            Develop healthy communication skills and strengthen your personal and professional 
+            relationships. Learn to set boundaries and build meaningful connections.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-2 text-white">Life Balance</h3>
+          <p>
+            Create harmony between your personal and professional life for greater fulfillment 
+            and well-being. Discover strategies for managing stress and maintaining balance.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AboutModal() {
+  return (
+    <div className="p-12">
+      <h2 className="text-3xl font-bold mb-4 tracking-widest">ABOUT</h2>
+      <div className="w-24 h-1 bg-white mb-8"></div>
+      
+      <div className="mb-8">
+        <Image
+          src="/pic03.jpg"
+          alt="About Us"
+          width={600}
+          height={300}
+          className="w-full h-64 object-cover rounded"
+        />
+      </div>
+
+      <div className="space-y-4 text-gray-300">
+        <h3 className="text-xl font-semibold text-white">Our Philosophy</h3>
+        <p>
+          At Internal Haven, we believe that everyone has the potential for growth and 
+          transformation. Our coaching approach is based on the principle that with the 
+          right guidance and support, individuals can overcome obstacles, discover their 
+          true purpose, and lead more fulfilling lives.
+        </p>
+
+        <h3 className="text-xl font-semibold text-white mt-6">Our Story</h3>
+        <p>
+          Internal Haven was founded with a simple mission: to help individuals navigate 
+          life's challenges and discover their true potential. What began as a small 
+          coaching practice has grown into a comprehensive life coaching service that 
+          has helped hundreds of clients transform their lives.
+        </p>
+
+        <h3 className="text-xl font-semibold text-white mt-6">Our Values</h3>
+        <ul className="list-disc list-inside space-y-2 ml-4">
+          <li>Authenticity - Being genuine in all interactions</li>
+          <li>Empowerment - Providing tools for lasting change</li>
+          <li>Growth - Embracing continuous development</li>
+          <li>Compassion - Creating safe spaces for vulnerability</li>
+          <li>Balance - Promoting harmony in all aspects of life</li>
+          <li>Integrity - Upholding the highest ethical standards</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function ContactModal() {
+  return (
+    <div className="p-12">
+      <h2 className="text-3xl font-bold mb-4 tracking-widest">CONTACT</h2>
+      <div className="w-24 h-1 bg-white mb-8"></div>
+      
+      <div className="space-y-4 text-gray-300">
+        <p>
+          Ready to begin your transformation journey? We'd love to hear from you. 
+          Reach out to schedule your free consultation and take the first step 
+          toward creating the life you deserve.
+        </p>
+
+        <form className="mt-8 space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-2 uppercase tracking-wider">
+              Name
+            </label>
+            <input
+              type="text"
+              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded 
+                       focus:outline-none focus:border-white/50 transition-colors"
+              placeholder="Your Name"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-2 uppercase tracking-wider">
+              Email
+            </label>
+            <input
+              type="email"
+              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded 
+                       focus:outline-none focus:border-white/50 transition-colors"
+              placeholder="your@email.com"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-2 uppercase tracking-wider">
+              Message
+            </label>
+            <textarea
+              rows={4}
+              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded 
+                       focus:outline-none focus:border-white/50 transition-colors resize-none"
+              placeholder="Tell us about your goals..."
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full py-3 bg-white text-gray-900 font-medium tracking-wider 
+                     uppercase hover:bg-gray-200 transition-colors rounded"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <div className="mt-8 pt-8 border-t border-gray-700">
+          <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
+          <div className="space-y-2 text-sm">
+            <p>Email: contact@internalhaven.com</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Location: Your City, State</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
