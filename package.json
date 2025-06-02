@@ -27,5 +27,17 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.0.0"
-  }
+  },
+  "description": "A modern, responsive website for a life coaching business built with Next.js and Tailwind CSS.",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alyssarey9/Internalhaven.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alyssarey9/Internalhaven/issues"
+  },
+  "homepage": "https://github.com/Alyssarey9/Internalhaven#readme"
 }
