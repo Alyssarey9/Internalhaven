@@ -60,7 +60,7 @@ export default function Home() {
 
         {/* Title and Subtitle */}
         <div className="text-center mb-16 max-w-4xl animate-fade-in-up">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 tracking-widest animate-glow">
+          <h1 className="text-6xl md:text-8xl font-gochi text-white mb-8 tracking-widest animate-glow">
             INTERNAL HAVEN
           </h1>
           <p className="text-white/90 text-base md:text-lg tracking-wider leading-relaxed uppercase max-w-3xl mx-auto">
@@ -75,28 +75,28 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-6 animate-fade-in-up-delay">
           <button
             onClick={() => setActiveModal('intro')}
-            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group"
+            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group rounded-full"
           >
             <span className="relative z-10">Start Here</span>
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
           </button>
           <button
             onClick={() => setActiveModal('work')}
-            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group"
+            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group rounded-full"
           >
             <span className="relative z-10">How I Help</span>
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
           </button>
           <button
             onClick={() => setActiveModal('about')}
-            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group"
+            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group rounded-full"
           >
             <span className="relative z-10">My Story</span>
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
           </button>
           <button
             onClick={() => setActiveModal('contact')}
-            className="px-10 py-4 border-2 border-yellow-400/70 text-yellow-300 text-sm tracking-widest hover:bg-yellow-400 hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-yellow-400 relative overflow-hidden group font-semibold"
+            className="px-10 py-4 border-2 border-yellow-400/70 text-yellow-300 text-sm tracking-widest hover:bg-yellow-400 hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-yellow-400 relative overflow-hidden group font-semibold rounded-full"
           >
             <span className="relative z-10">Work With Me</span>
             <div className="absolute inset-0 bg-yellow-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
@@ -116,12 +116,12 @@ export default function Home() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-modal-overlay">
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-gray-900/90 backdrop-blur-md"
+            className="absolute inset-0 bg-purple-400/30 backdrop-blur-md"
             onClick={closeModal}
           />
 
           {/* Modal Content */}
-          <div className="relative bg-gray-900/95 backdrop-blur-xl text-white max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl border border-white/10 animate-modal-content">
+          <div className="relative bg-purple-400/20 backdrop-blur-xl text-white max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl border border-purple-300/30 animate-modal-content">
             {/* Close Button */}
             <button
               onClick={closeModal}
@@ -251,7 +251,7 @@ function IntroModal() {
         <div className="mt-10 space-y-4">
           <button
             onClick={() => setShowNewsletterModal(true)}
-            className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-4 px-8 rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl uppercase tracking-wider"
+            className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-4 px-8 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl uppercase tracking-wider"
           >
             Get My Free "Life Audit" Tool
           </button>
@@ -348,7 +348,7 @@ function WorkModal() {
             Book a free 30-minute clarity call where we'll identify your biggest obstacle 
             and create a roadmap to overcome it.
           </p>
-          <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 px-8 rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-wider">
+          <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-wider">
             Book Your Free Call
           </button>
         </div>
@@ -500,7 +500,7 @@ function ContactModal() {
               30 minutes to identify your biggest obstacle and create a clear path forward. 
               No sales pitch, just value.
             </p>
-            <button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 px-6 rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-wider">
+            <button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 px-6 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-wider">
               Book Now
             </button>
           </div>
@@ -541,7 +541,7 @@ function ContactModal() {
 
             <button
               type="submit"
-              className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium tracking-wider uppercase hover:from-blue-500 hover:to-purple-500 transition-all duration-300 rounded-lg transform hover:scale-105 shadow-xl"
+              className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium tracking-wider uppercase hover:from-blue-500 hover:to-purple-500 transition-all duration-300 rounded-full transform hover:scale-105 shadow-xl"
             >
               Send Message
             </button>
@@ -596,7 +596,7 @@ function NewsletterModal({ onClose }) {
             />
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 uppercase tracking-wider"
+              className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 uppercase tracking-wider"
             >
               Send Me The Tools
             </button>

@@ -86,13 +86,18 @@ body {
     h6 { font-size: 1.25rem; }
   }
 
-  /* Apply Bellota font to all headings and important text elements */
+  /* Apply fonts to elements */
   h1, h2, h3, h4, h5, h6, 
   .heading, 
   .title, 
   .font-heading {
     font-family: 'Bellota', cursive;
     font-weight: 700;
+  }
+
+  /* Special class for the main heading */
+  .main-title {
+    font-family: 'Gochi Hand', cursive;
   }
 
   p, span, div, a, button, input, textarea, label {
@@ -141,25 +146,21 @@ body {
   .gradient-text {
     @apply bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent;
     font-family: 'Bellota', cursive;
-    font-weight: 700;
   }
 
   .gradient-text-purple {
     @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent;
     font-family: 'Bellota', cursive;
-    font-weight: 700;
   }
 
   .gradient-text-blue {
     @apply bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-500 bg-clip-text text-transparent;
     font-family: 'Bellota', cursive;
-    font-weight: 700;
   }
 
   .gradient-text-sunset {
     @apply bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-clip-text text-transparent;
     font-family: 'Bellota', cursive;
-    font-weight: 700;
   }
 
   /* Glowing text effects */
@@ -306,5 +307,4 @@ body {
 .animate-rainbow-glow {
   animation: rainbow-glow 3s linear infinite;
   font-family: 'Bellota', cursive;
-  font-weight: 700;
 }
