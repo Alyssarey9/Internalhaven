@@ -19,6 +19,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
+  font-family: 'Bellota', cursive;
 }
 
 @layer base {
@@ -28,6 +29,74 @@ body {
 
   html {
     scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
+  }
+
+  /* Responsive typography */
+  body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Mobile first responsive typography */
+  @media (max-width: 640px) {
+    html { font-size: 14px; }
+    body { font-size: 0.9rem; }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.875rem; }
+  }
+
+  /* Tablet */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    html { font-size: 15px; }
+    body { font-size: 1rem; }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.875rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.125rem; }
+    h6 { font-size: 1rem; }
+  }
+
+  /* Desktop */
+  @media (min-width: 1025px) {
+    html { font-size: 16px; }
+    body { font-size: 1.125rem; }
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.25rem; }
+    h3 { font-size: 1.875rem; }
+    h4 { font-size: 1.5rem; }
+    h5 { font-size: 1.25rem; }
+    h6 { font-size: 1.125rem; }
+  }
+
+  /* Large desktop */
+  @media (min-width: 1440px) {
+    html { font-size: 18px; }
+    body { font-size: 1.125rem; }
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.75rem; }
+    h3 { font-size: 2.25rem; }
+    h4 { font-size: 1.875rem; }
+    h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.25rem; }
+  }
+
+  /* Apply Bellota font to all headings and important text elements */
+  h1, h2, h3, h4, h5, h6, 
+  .heading, 
+  .title, 
+  .font-heading {
+    font-family: 'Bellota', cursive;
+    font-weight: 700;
+  }
+
+  p, span, div, a, button, input, textarea, label {
+    font-family: 'Bellota', cursive;
   }
 
   /* Custom scrollbar for modal content */
@@ -68,15 +137,85 @@ body {
     @apply transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
   }
 
-  /* Gradient text effect */
+  /* Enhanced Gradient text effects */
   .gradient-text {
     @apply bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent;
+    font-family: 'Bellota', cursive;
+    font-weight: 700;
+  }
+
+  .gradient-text-purple {
+    @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent;
+    font-family: 'Bellota', cursive;
+    font-weight: 700;
+  }
+
+  .gradient-text-blue {
+    @apply bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-500 bg-clip-text text-transparent;
+    font-family: 'Bellota', cursive;
+    font-weight: 700;
+  }
+
+  .gradient-text-sunset {
+    @apply bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-clip-text text-transparent;
+    font-family: 'Bellota', cursive;
+    font-weight: 700;
+  }
+
+  /* Glowing text effects */
+  .text-glow-white {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4);
+    font-family: 'Bellota', cursive;
+  }
+
+  .text-glow-blue {
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.8),
+                 0 0 20px rgba(96, 165, 250, 0.6),
+                 0 0 30px rgba(96, 165, 250, 0.4);
+    font-family: 'Bellota', cursive;
+  }
+
+  .text-glow-purple {
+    color: #a855f7;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8),
+                 0 0 20px rgba(168, 85, 247, 0.6),
+                 0 0 30px rgba(168, 85, 247, 0.4);
+    font-family: 'Bellota', cursive;
+  }
+
+  .text-glow-gold {
+    color: #fbbf24;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.8),
+                 0 0 20px rgba(251, 191, 36, 0.6),
+                 0 0 30px rgba(251, 191, 36, 0.4);
+    font-family: 'Bellota', cursive;
+  }
+
+  .text-glow-pink {
+    color: #ec4899;
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.8),
+                 0 0 20px rgba(236, 72, 153, 0.6),
+                 0 0 30px rgba(236, 72, 153, 0.4);
+    font-family: 'Bellota', cursive;
   }
 
   /* Glass morphism effect */
   .glass {
     @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-xl;
   }
+
+  /* Responsive text utilities */
+  .text-responsive-xs { @apply text-xs sm:text-sm md:text-base; }
+  .text-responsive-sm { @apply text-sm sm:text-base md:text-lg; }
+  .text-responsive-base { @apply text-base sm:text-lg md:text-xl; }
+  .text-responsive-lg { @apply text-lg sm:text-xl md:text-2xl; }
+  .text-responsive-xl { @apply text-xl sm:text-2xl md:text-3xl; }
+  .text-responsive-2xl { @apply text-2xl sm:text-3xl md:text-4xl; }
+  .text-responsive-3xl { @apply text-3xl sm:text-4xl md:text-5xl; }
 }
 
 /* Enhanced animations */
@@ -111,6 +250,43 @@ body {
   }
 }
 
+@keyframes pulse-glow-color {
+  0%, 100% {
+    text-shadow: 0 0 10px currentColor,
+                 0 0 20px currentColor,
+                 0 0 30px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 20px currentColor,
+                 0 0 30px currentColor,
+                 0 0 40px currentColor;
+  }
+}
+
+@keyframes rainbow-glow {
+  0% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  }
+  16.66% {
+    text-shadow: 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 30px #ff8000;
+  }
+  33.33% {
+    text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00;
+  }
+  50% {
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+  66.66% {
+    text-shadow: 0 0 10px #0080ff, 0 0 20px #0080ff, 0 0 30px #0080ff;
+  }
+  83.33% {
+    text-shadow: 0 0 10px #8000ff, 0 0 20px #8000ff, 0 0 30px #8000ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  }
+}
+
 .animate-fade-in-scale {
   animation: fadeInScale 0.6s ease-out;
 }
@@ -121,4 +297,14 @@ body {
 
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow-text {
+  animation: pulse-glow-color 2s ease-in-out infinite;
+}
+
+.animate-rainbow-glow {
+  animation: rainbow-glow 3s linear infinite;
+  font-family: 'Bellota', cursive;
+  font-weight: 700;
 }
