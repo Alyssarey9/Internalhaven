@@ -27,34 +27,13 @@ export default function Home() {
         {/* Logo */}
         <div className="mb-8 animate-fade-in">
           <div className="w-24 h-24 rounded-full border-2 border-cotton/50 flex items-center justify-center bg-lavender/20 backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-105 hover:border-apricot">
-            <svg
-              viewBox="0 0 24 24"
-              className="w-12 h-12 text-cotton"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2L2 7L12 12L22 7L12 2Z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M2 17L12 22L22 17"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M2 12L12 17L22 12"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <Image
+              src="/images/dragonfly.svg"
+              alt="Internal Haven Dragonfly Logo"
+              width={48}
+              height={48}
+              className="w-20 h-20 text-cotton"
+            />
           </div>
         </div>
 
@@ -112,12 +91,12 @@ export default function Home() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-modal-overlay">
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-deep-plum/40 backdrop-blur-md"
+            className="absolute inset-0 bg-deep-plum/60 backdrop-blur-md"
             onClick={closeModal}
           />
 
           {/* Modal Content */}
-          <div className="relative glass-dark text-cotton max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl animate-modal-content">
+          <div className="relative bg-deep-plum text-cotton max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl animate-modal-content">
             {/* Close Button */}
             <button
               onClick={closeModal}
@@ -213,26 +192,34 @@ function IntroModal() {
 
       <div className="space-y-6 text-cloud-gray text-lg leading-relaxed font-coming-soon">
         <p className="text-xl text-cotton font-medium">
-          Are you tired of feeling stuck, going through the motions, wondering "Is this it?"
+          As a woman in her 20s to 40s, life can feel like a constant balancing act.
         </p>
         
         <p>
-          You're successful on paper, but something's missing. You wake up feeling empty, going through the same routine, 
-          knowing there's more to life but not knowing how to find it. The worst part? Everyone thinks you "have it all together" 
-          when inside you're questioning everything.
+          We're navigating the pressures of career, relationships, and personal growth while trying to meet societal expectations 
+          and care for those around us. It's easy to feel overwhelmed, stuck, or like we're never doing enough. Struggles with 
+          self-doubt, perfectionism, and burnout may leave us wondering if true balance & fulfillment are even possible.
         </p>
         
         <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-6 rounded-lg border-l-4 border-apricot">
-          <p className="font-semibold text-apricot text-xl mb-3 font-urbanist">What if I told you...</p>
+          <p className="font-semibold text-apricot text-xl mb-3 font-urbanist">But what we truly long for...</p>
           <p>
-            You're closer to your breakthrough than you think. That restless feeling? It's your soul calling you toward your purpose. 
-            The confusion? It's because you've been following someone else's blueprint for success instead of creating your own.
+            Is clarity and purpose — a sense of direction that aligns with who we truly are. We want to feel confident, 
+            empowered, and at peace in our own skin. We dream of living authentically, with the freedom to prioritize our 
+            needs without guilt. Above all, we're ready to reclaim our time, our health, & our energy to build a life that 
+            feels meaningful and aligned with our values.
           </p>
         </div>
 
         <p>
-          I help high-achievers like you break free from the "should be happy" trap and design a life that actually fulfills you. 
-          No more pretending everything's fine. No more settling for "good enough."
+          I'm here to help you move from feeling stuck and overwhelmed to confident and aligned. Together, we'll tackle the 
+          doubts and habits holding you back and replace them with simple, powerful tools to bring clarity and balance to your life. 
+          You'll learn how to manage stress, quiet self-doubt, and reconnect with what truly matters to you. Step by step, we'll 
+          create a life that feels authentic, meaningful, and full of freedom.
+        </p>
+        
+        <p className="text-xl text-apricot font-medium font-urbanist italic text-center py-4">
+          "It's time to make yourself & your growth a priority."
         </p>
 
         <div className="mt-10 space-y-4">
@@ -240,10 +227,10 @@ function IntroModal() {
             onClick={() => setShowNewsletterModal(true)}
             className="w-full btn-primary"
           >
-            Get My Free "Life Audit" Tool
+            Get My Free Mindfulness Tools
           </button>
           <p className="text-center text-sm text-lavender">
-            Discover exactly where you're stuck and your next steps forward (5-minute assessment)
+            3 powerful tools to support your personal growth and cultivate mindfulness
           </p>
         </div>
       </div>
@@ -257,7 +244,7 @@ function IntroModal() {
 function WorkModal() {
   return (
     <div className="p-16">
-      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">HOW I HELP</h2>
+      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">MY COACHING APPROACH</h2>
       <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
       <div className="mb-10">
@@ -272,71 +259,49 @@ function WorkModal() {
 
       <div className="space-y-8 text-cloud-gray font-coming-soon">
         <p className="text-xl text-cotton font-medium leading-relaxed">
-          I don't believe in one-size-fits-all solutions. Your journey is unique, and your transformation should be too.
+          I combine proven methodologies like Jay Shetty's ABC Framework with insights from Emotional Intelligence, 
+          Positive Psychology, Mindfulness, and Neuroscience to help clients build self-awareness and emotional mastery.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-amethyst/20 to-lavender/20 p-8 rounded-xl border border-amethyst/30">
-            <h3 className="text-2xl font-bold mb-4 text-amethyst font-urbanist">Purpose Discovery</h3>
-            <p className="mb-4">
-              Stop guessing what you're "supposed" to do. Uncover your authentic purpose using proven frameworks 
-              that cut through the noise and get to your core.
-            </p>
-            <ul className="space-y-2 text-sm">
-              <li>• Values clarification exercises</li>
-              <li>• Strengths identification</li>
-              <li>• Life vision mapping</li>
-            </ul>
-          </div>
+        <div className="bg-gradient-to-r from-amethyst/20 to-lavender/20 p-6 rounded-lg border border-amethyst/30">
+          <h3 className="text-2xl font-bold mb-4 text-amethyst font-urbanist">My Mission</h3>
+          <p>
+            My mission is to empower and support women in embracing their natural curiosity about their mental and emotional processes, 
+            deepening their self-understanding. By cultivating self-love, acceptance, and confidence, I help clients navigate life's 
+            challenges with clarity and resilience, creating a life rooted in peace and purpose.
+          </p>
+        </div>
 
-          <div className="bg-gradient-to-br from-sage/20 to-dusty-rose/20 p-8 rounded-xl border border-sage/30">
-            <h3 className="text-2xl font-bold mb-4 text-sage font-urbanist">Breakthrough Barriers</h3>
-            <p className="mb-4">
-              Identify and dissolve the invisible walls keeping you stuck. Transform limiting beliefs into 
-              empowering truths that propel you forward.
-            </p>
-            <ul className="space-y-2 text-sm">
-              <li>• Limiting belief rewiring</li>
-              <li>• Fear transformation techniques</li>
-              <li>• Confidence building strategies</li>
-            </ul>
-          </div>
+        <div className="bg-gradient-to-r from-sage/20 to-dusty-rose/20 p-6 rounded-lg border border-sage/30">
+          <h3 className="text-2xl font-bold mb-4 text-sage font-urbanist">My Vision</h3>
+          <p>
+            My vision is to guide individuals toward greater self-awareness and mindfulness through my life coaching services 
+            and authentic, everyday interactions with those around me. I strive to inspire people to integrate mindfulness into 
+            their daily lives, unlocking their full potential to achieve meaningful goals and design a life they truly desire to live.
+          </p>
+        </div>
 
-          <div className="bg-gradient-to-br from-apricot/20 to-dusty-rose/20 p-8 rounded-xl border border-apricot/30">
-            <h3 className="text-2xl font-bold mb-4 text-apricot font-urbanist">Strategic Action</h3>
-            <p className="mb-4">
-              Bridge the gap between where you are and where you want to be with clear, actionable steps 
-              tailored to your unique situation.
-            </p>
-            <ul className="space-y-2 text-sm">
-              <li>• Custom action plans</li>
-              <li>• Accountability systems</li>
-              <li>• Progress tracking tools</li>
-            </ul>
-          </div>
-
-          <div className="bg-gradient-to-br from-lavender/20 to-deep-plum/20 p-8 rounded-xl border border-lavender/30">
-            <h3 className="text-2xl font-bold mb-4 text-lavender font-urbanist">Lasting Transformation</h3>
-            <p className="mb-4">
-              Create sustainable change that sticks. Build new habits and mindsets that support 
-              your growth long after our work together ends.
-            </p>
-            <ul className="space-y-2 text-sm">
-              <li>• Habit formation strategies</li>
-              <li>• Mindset optimization</li>
-              <li>• Support system building</li>
-            </ul>
-          </div>
+        <div className="space-y-6">
+          <p className="text-lg leading-relaxed">
+            Using a unique emotion self-regulation technique, I guide clients to understand, process, and release emotions 
+            that may be holding them back, empowering them to navigate challenges with calm and clarity.
+          </p>
+          
+          <p className="text-lg leading-relaxed">
+            Your journey would begin with a <span className="text-apricot font-semibold">FREE 45-minute discovery call</span>, 
+            where we create a safe, judgment-free space to uncover roadblocks like fears and limiting beliefs. Together, we'll 
+            map out a personalized path toward your goals, with motivation, accountability, and steady progress ensuring real transformation.
+          </p>
         </div>
 
         <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50 text-center">
-          <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">Ready to stop settling?</h4>
+          <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">Ready to start your transformation?</h4>
           <p className="mb-6 text-lg">
-            Book a free 30-minute clarity call where we'll identify your biggest obstacle 
-            and create a roadmap to overcome it.
+            I combine proven methodologies with personalized support to help you build self-awareness, 
+            emotional mastery, and create lasting change in your life.
           </p>
           <button className="btn-primary">
-            Book Your Free Call
+            Schedule Your FREE Discovery Call
           </button>
         </div>
       </div>
@@ -363,24 +328,24 @@ function AboutModal() {
         
         <div className="space-y-6 text-cloud-gray leading-relaxed font-coming-soon">
           <p className="text-xl text-cotton font-medium">
-            I used to be the poster child for "having it all together."
+            Hi, I'm Alyssa Rey, a certified life coach, volleyball coach, and a passionate advocate for helping women like you build lives full of peace, freedom, and purpose.
           </p>
           
           <p>
-            From the outside, my life looked perfect. Successful career, checking all the boxes society told me would make me happy. 
-            But inside, I felt empty, disconnected, and constantly asking "Is this really it?"
+            I've always felt a deep calling to create safe, authentic spaces where people can express themselves fully and confidently. 
+            With grounded energy and easy-to-understand tools, I'm here to help you organize your life and navigate your emotions with clarity and mindfulness.
           </p>
           
           <p>
-            The breaking point came when I realized I was living someone else's definition of success. 
-            I had climbed the ladder only to discover it was leaning against the wrong wall.
+            Whether it's gaining confidence, finding balance, or simply making time for yourself, we'll work together to create meaningful shifts that last.
           </p>
           
           <div className="bg-gradient-to-r from-amethyst/20 to-lavender/20 p-6 rounded-lg border-l-4 border-amethyst">
-            <p className="font-semibold text-amethyst mb-2 font-urbanist">The moment everything changed:</p>
+            <p className="font-semibold text-amethyst mb-2 font-urbanist">My Personal Experience:</p>
             <p>
-              I stopped asking "What should I do?" and started asking "Who am I really, and what do I actually want?" 
-              That shift in perspective changed everything.
+              Toward the beginning of 2023, I found myself trapped in a cycle of heavy emotions. As a highly sensitive person, 
+              I felt everything deeply—frustration at being stuck in a job that didn't fulfill me, exhaustion from pouring my 
+              energy into something I wasn't passionate about, and an overwhelming sense of urgency to pursue the things I truly cared about but never had time for.
             </p>
           </div>
         </div>
@@ -388,54 +353,81 @@ function AboutModal() {
 
       <div className="mt-12 space-y-6 text-cloud-gray font-coming-soon">
         <p>
-          Today, I wake up excited about my life. I've built a business I love, relationships that fulfill me, 
-          and most importantly, I know who I am and what I stand for. But it wasn't luck or chance—it was a process.
+          Every morning, I woke up carrying the same weight, knowing deep down that something needed to change. Then, I discovered 
+          the Jay Shetty Certification School—or maybe it found me. This life coaching certification program became my safe space 
+          to grow, reflect, and step into the person I was always meant to be.
+        </p>
+
+        <p>
+          Today, I am no longer confined to a traditional 9-to-5 job. I have embraced my calling as a life coach, creating a career 
+          and lifestyle that aligns with my true self. Whether coaching in life or volleyball, I now wake up each day with a renewed 
+          sense of purpose, passion, and peace.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 mt-10">
+          
+          <div className="text-center">
+            <Image
+              src="/images/Me reading Photo.jpg"
+              alt="Volleyball coaching"
+              width={200}
+              height={200}
+              className="mx-auto mb-4 rounded-lg shadow-lg h-32 w-32 object-cover"
+            />
+            <h4 className="font-semibold text-cotton font-urbanist">Volleyball Coach</h4>
+            <p className="text-sm text-lavender">High School & Club Teams (40+ students)</p>
+          </div>
+
           <div className="text-center">
             <Image
               src="/images/Jay Shetty Certified Coach Photo.PNG"
-              alt="Certification"
+              alt="Jay Shetty Certification"
               width={200}
               height={200}
               className="mx-auto mb-4 rounded-lg shadow-lg"
             />
             <h4 className="font-semibold text-cotton font-urbanist">Certified Life Coach</h4>
-            <p className="text-sm text-lavender">Jay Shetty Certification School</p>
-          </div>
-          
-          <div className="text-center">
-            <Image
-              src="/images/Me reading Photo.jpg"
-              alt="Continuous learning"
-              width={200}
-              height={200}
-              className="mx-auto mb-4 rounded-lg shadow-lg h-32 w-32 object-cover"
-            />
-            <h4 className="font-semibold text-cotton font-urbanist">Continuous Learner</h4>
-            <p className="text-sm text-lavender">Always growing, always evolving</p>
+            <p className="text-sm text-lavender">Jay Shetty Certification School (2023)</p>
           </div>
           
           <div className="text-center">
             <Image
               src="/images/peaceful vibes with journal.JPEG"
-              alt="Daily practice"
+              alt="Learning drums"
               width={200}
               height={200}
               className="mx-auto mb-4 rounded-lg shadow-lg h-32 w-32 object-cover"
             />
-            <h4 className="font-semibold text-cotton font-urbanist">Daily Practitioner</h4>
-            <p className="text-sm text-lavender">Walking the walk, not just talking</p>
+            <h4 className="font-semibold text-cotton font-urbanist">Lifelong Learner</h4>
+            <p className="text-sm text-lavender">Drumming, expanding comfort zones</p>
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50 text-center mt-10">
-          <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">My Mission</h4>
-          <p className="text-lg mb-6">
-            To help you stop living someone else's life and start creating the one that's truly yours. 
-            Because you deserve more than just getting by—you deserve to thrive.
+        <div className="bg-gradient-to-r from-sage/20 to-dusty-rose/20 p-6 rounded-lg border border-sage/30 mt-8">
+          <p className="text-lg leading-relaxed">
+            I earned my life coaching certification from the Jay Shetty Certification School in 2023. Since then, I have coached 
+            some of my friends, peers, and family members through my unique and personalized services. I am also a high school 
+            volleyball coach at my alma mater, Alonzo & Tracy Mourning Senior High, where I've been fortunate to bring my life 
+            coaching skills to 40+ high school students, both girls and boys. I also coach a bundle of energetic 13-year-olds for 
+            a volleyball club called Playeros based in Miami Beach, FL.
           </p>
+        </div>
+
+        <p>
+          I'm always seeking to expand my comfort zone, which led me to learn how to play the drums in 2022. I draw inspiration 
+          from the lessons nature offers and embrace being a student of life. Every day, I commit to bringing my best self to 
+          every experience, whether that's coaching, learning, drumming, or connecting with others.
+        </p>
+
+        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50 text-center mt-10">
+          <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">I believe that every woman deserves to feel confident, capable, and at peace in her own life.</h4>
+          <p className="text-lg mb-6">
+            I've experienced firsthand what it means to step into alignment, and my mission is to help others do the same. 
+            Through my coaching, I guide women to find clarity, confidence, and the freedom to create a life that truly resonates with them.
+          </p>
+          <button className="btn-primary">
+            Schedule Your Free Discovery Call
+          </button>
         </div>
       </div>
     </div>
@@ -448,95 +440,75 @@ function ContactModal() {
       <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">WORK WITH ME</h2>
       <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
-      <div className="grid lg:grid-cols-2 gap-12">
-        <div className="space-y-6 text-cloud-gray font-coming-soon">
-          <p className="text-xl text-cotton font-medium">
-            Ready to stop settling and start thriving?
+      <div className="space-y-8 text-cloud-gray font-coming-soon">
+        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50">
+          <h3 className="text-3xl font-bold mb-6 text-apricot font-urbanist">One-on-One Life Coaching Sessions</h3>
+          <p className="text-lg mb-4">
+            In our personalized, one-on-one coaching relationship, I am dedicated to supporting you on your path to becoming the best version of yourself!
           </p>
-          
-          <p>
-            If you're tired of feeling stuck and ready to create real change, I'm here to guide you. 
-            This isn't about quick fixes or surface-level changes—this is about deep, lasting transformation.
+          <p className="mb-4">
+            Through empowerment and guidance, we work together to expand your self-awareness, foster deep self-love, and unlock the immense power that resides within you!
           </p>
-
-          <div className="bg-gradient-to-r from-sage/20 to-dusty-rose/20 p-6 rounded-lg border border-sage/30">
-            <h4 className="text-xl font-bold mb-3 text-sage font-urbanist">Perfect for you if:</h4>
-            <ul className="space-y-2">
-              <li>• You're successful but unfulfilled</li>
-              <li>• You know there's more to life but don't know how to find it</li>
-              <li>• You're ready to do the work (not looking for magic pills)</li>
-              <li>• You want authentic transformation, not just temporary motivation</li>
-            </ul>
-          </div>
-
-          <div className="bg-gradient-to-r from-dusty-rose/20 to-deep-plum/20 p-6 rounded-lg border border-dusty-rose/30">
-            <h4 className="text-xl font-bold mb-3 text-dusty-rose font-urbanist">Not for you if:</h4>
-            <ul className="space-y-2">
-              <li>• You're looking for someone to fix your problems for you</li>
-              <li>• You want quick fixes without putting in effort</li>
-              <li>• You're not ready to challenge your current beliefs</li>
-              <li>• You prefer complaining to taking action</li>
-            </ul>
+          <p className="mb-6">
+            The one-on-one coaching journey would begin with a <span className="text-apricot font-semibold">FREE discovery call</span>, where we focus on building a trusting, honest connection. I create a safe, non-judgmental space where you can be yourself, and we'll establish clear expectations to ensure our time together is effective and meaningful.
+          </p>
+          <p className="mb-6">
+            Through thoughtful, open-ended questions, I help you gain deeper self-awareness and identify the roadblocks—like fears or limiting beliefs—that may hold you back from something that you are pursuing or want to pursue. Together, we'll explore new paths toward your goals while I provide guidance and encouragement every step of the way.
+          </p>
+          <p className="mb-6">
+            The real transformation happens as you apply these insights to your daily life. With ongoing support, reflection, and accountability, you'll begin to see meaningful progress toward living a more fulfilled, purpose-driven life. Let's start this journey together!
+          </p>
+          <div className="text-center">
+            <button className="btn-primary text-lg px-8 py-4">
+              Schedule a FREE Discovery Call Now!
+            </button>
           </div>
         </div>
 
-        <div className="space-y-6">
-          <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50 text-center">
-            <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">Free Clarity Call</h4>
-            <p className="mb-6 font-coming-soon">
-              30 minutes to identify your biggest obstacle and create a clear path forward. 
-              No sales pitch, just value.
-            </p>
-            <button className="w-full btn-primary">
-              Book Now
-            </button>
+        <div className="bg-gradient-to-r from-sage/20 to-dusty-rose/20 p-8 rounded-lg border border-sage/30">
+          <h3 className="text-3xl font-bold mb-6 text-sage font-urbanist">Free Mindfulness Tools</h3>
+          <p className="text-lg mb-6">
+            Unlock your full potential with these 3 powerful life coaching tools that will help support your personal growth and cultivate more mindfulness into your daily habits and actions. Whether it's enhancing emotional intelligence or building a positive mindset, these tools are here to guide you on a journey of self-discovery and transformation.
+          </p>
+          
+          <div className="grid md:grid-cols-1 gap-6">
+            <div className="bg-amethyst/20 p-6 rounded-lg border border-amethyst/30">
+              <h4 className="text-xl font-bold mb-3 text-amethyst font-urbanist">How to be Your Own Bestie</h4>
+              <p className="text-sm">
+                Unlock the secrets to building a loving, supportive relationship with yourself. This empowering coaching tool guides you through practical steps to boost self-love, nurture your inner dialogue, and show up for yourself like your own biggest cheerleader. It's time to embrace the best friend you already have—you!
+              </p>
+            </div>
+            
+            <div className="bg-lavender/20 p-6 rounded-lg border border-lavender/30">
+              <h4 className="text-xl font-bold mb-3 text-lavender font-urbanist">Tips to Cultivate a Growth Mindset</h4>
+              <p className="text-sm">
+                Transform challenges into opportunities with this empowering coaching tool. Discover practical strategies to reframe setbacks, embrace lifelong learning, and unlock your potential. Build a mindset that thrives on growth and fuels your journey to success!
+              </p>
+            </div>
+            
+            <div className="bg-dusty-rose/20 p-6 rounded-lg border border-dusty-rose/30">
+              <h4 className="text-xl font-bold mb-3 text-dusty-rose font-urbanist">Emotion Self-Regulation Guide</h4>
+              <p className="text-sm">
+                Master your emotions with this transformative coaching tool. Learn simple, effective strategies to stay calm under pressure, navigate difficult feelings, and respond to life's challenges with confidence and clarity. Take control of your emotional well-being today!
+              </p>
+            </div>
           </div>
+        </div>
 
-          <form className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-lavender font-coming-soon">
-                Name *
-              </label>
-              <input
-                type="text"
-                className="w-full px-4 py-3 bg-lavender/20 border border-amethyst/30 rounded-lg focus:outline-none focus:border-apricot focus:bg-cloud-gray/20 transition-colors text-cotton placeholder-amethyst/60"
-                placeholder="Your full name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-lavender font-coming-soon">
-                Email *
-              </label>
-              <input
-                type="email"
-                className="w-full px-4 py-3 bg-lavender/20 border border-amethyst/30 rounded-lg focus:outline-none focus:border-apricot focus:bg-cloud-gray/20 transition-colors text-cotton placeholder-amethyst/60"
-                placeholder="your@email.com"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-lavender font-coming-soon">
-                What's your biggest challenge right now? *
-              </label>
-              <textarea
-                rows={4}
-                className="w-full px-4 py-3 bg-lavender/20 border border-amethyst/30 rounded-lg focus:outline-none focus:border-apricot focus:bg-cloud-gray/20 transition-colors resize-none text-cotton placeholder-amethyst/60"
-                placeholder="Be specific - this helps me prepare for our call..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full btn-accent"
-            >
-              Send Message
-            </button>
-          </form>
-
-          <div className="text-center text-sm text-lavender font-coming-soon">
-            <p>Usually respond within 24 hours</p>
+        <div className="bg-gradient-to-r from-deep-plum/20 to-amethyst/20 p-8 rounded-lg border border-deep-plum/30 text-center">
+          <h4 className="text-2xl font-bold mb-4 text-cotton font-urbanist">Are YOU ready to take the next step toward your best self?</h4>
+          <div className="text-left mb-6 space-y-2">
+            <p>With 'How to Be Your Own Bestie', you'll strengthen your self-love and inner support system.</p>
+            <p>Dive into 'Tips to Cultivate a Growth Mindset' to unlock new opportunities and embrace your full potential.</p>
+            <p>And with the 'Emotion Self-Regulation Guide', you'll gain the tools to navigate life's emotional rollercoasters with confidence and clarity.</p>
           </div>
+          <p className="text-xl font-semibold mb-4 text-apricot font-urbanist">These tools are just the BEGINNING!</p>
+          <p className="mb-6">
+            Let's work together to create a life of peace, purpose, and self-empowerment. Schedule your free discovery call today, and let's start your journey toward transformation!
+          </p>
+          <button className="btn-primary text-lg px-8 py-4">
+            Schedule Your Free Discovery Call Today!
+          </button>
         </div>
       </div>
     </div>
@@ -547,8 +519,8 @@ function ContactModal() {
 function NewsletterModal({ onClose }) {
   return (
     <div className="fixed inset-0 z-60 flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-deep-plum/70" onClick={onClose} />
-      <div className="relative glass-dark p-8 rounded-xl max-w-md w-full shadow-2xl">
+      <div className="absolute inset-0 bg-deep-plum/80" onClick={onClose} />
+      <div className="relative bg-deep-plum p-8 rounded-xl max-w-md w-full shadow-2xl">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-cotton/60 hover:text-apricot text-2xl"
@@ -563,16 +535,16 @@ function NewsletterModal({ onClose }) {
                 <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-cotton mb-2 font-urbanist">Get Your Free Tools!</h3>
+            <h3 className="text-2xl font-bold text-cotton mb-2 font-urbanist">Get Your Free Mindfulness Tools!</h3>
             <p className="text-cloud-gray text-sm font-coming-soon">
-              Enter your email and I'll send you the Life Audit Tool plus 2 bonus resources:
+              Enter your email and I'll send you 3 powerful tools to support your personal growth and cultivate mindfulness:
             </p>
           </div>
           
           <ul className="text-left text-sm text-cloud-gray mb-6 space-y-2 font-coming-soon">
-            <li>✓ Life Audit Assessment (5 min)</li>
-            <li>✓ Values Clarification Worksheet</li>
-            <li>✓ Purpose Discovery Guide</li>
+            <li>✓ How to Be Your Own Bestie Guide</li>
+            <li>✓ Tips to Cultivate a Growth Mindset</li>
+            <li>✓ Emotion Self-Regulation Technique</li>
           </ul>
           
           <form className="space-y-4">
