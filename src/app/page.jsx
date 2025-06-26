@@ -13,7 +13,7 @@ export default function Home() {
       {/* Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/images/background_1.jpg"
+          src="/images/background_10.jpg"
           alt="Peaceful mountain landscape"
           fill
           className="object-cover object-center"
