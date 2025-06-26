@@ -28,7 +28,16 @@ module.exports = {
         '9xl': ['8rem', { lineHeight: '1' }],
       },
       colors: {
-        // You can customize your color palette here
+        // Internal Haven Color Palette
+        'cotton': '#F5F0EA',
+        'amethyst': '#786B89',
+        'lavender': '#CBBFDD',
+        'apricot': '#EFA986',
+        'sage': '#ACB087',
+        'deep-plum': '#5D4B69',
+        'dusty-rose': '#D9A5B3',
+        'cloud-gray': '#DAD7D2',
+        'midnight-ink': '#3C3342',
       },
     },
   },

@@ -9,7 +9,7 @@ export default function Home() {
   const closeModal = () => setActiveModal(null);
 
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden bg-cotton">
       {/* Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
@@ -19,17 +19,17 @@ export default function Home() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/50 to-gray-900/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-deep-plum/70 via-amethyst/50 to-lavender/30" />
       </div>
 
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
         {/* Logo */}
         <div className="mb-8 animate-fade-in">
-          <div className="w-24 h-24 rounded-full border-2 border-white/50 flex items-center justify-center bg-white/15 backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-105 hover:border-white/70">
+          <div className="w-24 h-24 rounded-full border-2 border-cotton/50 flex items-center justify-center bg-lavender/20 backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-105 hover:border-apricot">
             <svg
               viewBox="0 0 24 24"
-              className="w-12 h-12 text-white"
+              className="w-12 h-12 text-cotton"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -60,12 +60,12 @@ export default function Home() {
 
         {/* Title and Subtitle */}
         <div className="text-center mb-16 max-w-4xl animate-fade-in-up">
-          <h1 className="text-6xl md:text-8xl font-gochi text-white mb-8 tracking-widest animate-glow">
+          <h1 className="text-6xl md:text-8xl font-urbanist text-cotton mb-8 tracking-widest animate-palette-glow">
             Internal Haven
           </h1>
-          <p className="text-white/90 text-base md:text-lg tracking-wider leading-relaxed max-w-3xl mx-auto">
+          <p className="text-cotton/90 text-base md:text-lg tracking-wider leading-relaxed max-w-3xl mx-auto font-coming-soon">
             Stop feeling stuck, overwhelmed, and unsure of your next step. 
-            <span className="block mt-2 text-yellow-300">
+            <span className="block mt-2 text-apricot font-semibold">
               Discover your purpose, break through barriers, and create the fulfilling life you deserve.
             </span>
           </p>
@@ -75,37 +75,33 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-6 animate-fade-in-up-delay">
           <button
             onClick={() => setActiveModal('intro')}
-            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group rounded-full"
+            className="btn-secondary"
           >
             <span className="relative z-10">Start Here</span>
-            <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
           </button>
           <button
             onClick={() => setActiveModal('work')}
-            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group rounded-full"
+            className="btn-secondary"
           >
             <span className="relative z-10">How I Help</span>
-            <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
           </button>
           <button
             onClick={() => setActiveModal('about')}
-            className="px-10 py-4 border-2 border-white/40 text-white text-sm tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-white relative overflow-hidden group rounded-full"
+            className="btn-secondary"
           >
             <span className="relative z-10">My Story</span>
-            <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
           </button>
           <button
             onClick={() => setActiveModal('contact')}
-            className="px-10 py-4 border-2 border-yellow-400/70 text-yellow-300 text-sm tracking-widest hover:bg-yellow-400 hover:text-gray-900 transition-all duration-500 backdrop-blur-md uppercase transform hover:scale-105 hover:shadow-2xl hover:border-yellow-400 relative overflow-hidden group font-semibold rounded-full"
+            className="btn-primary"
           >
             <span className="relative z-10">Work With Me</span>
-            <div className="absolute inset-0 bg-yellow-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
           </button>
         </div>
 
         {/* Footer */}
         <div className="absolute bottom-8 left-0 right-0 text-center animate-fade-in">
-          <p className="text-white/50 text-xs tracking-wider uppercase">
+          <p className="text-cotton/60 text-xs tracking-wider uppercase font-coming-soon">
             © Internal Haven. Transform Your Life From Within.
           </p>
         </div>
@@ -116,16 +112,16 @@ export default function Home() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-modal-overlay">
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-purple-400/30 backdrop-blur-md"
+            className="absolute inset-0 bg-deep-plum/40 backdrop-blur-md"
             onClick={closeModal}
           />
 
           {/* Modal Content */}
-          <div className="relative bg-purple-400/20 backdrop-blur-xl text-white max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl border border-purple-300/30 animate-modal-content">
+          <div className="relative glass-dark text-cotton max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl animate-modal-content">
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-6 right-6 text-white/60 hover:text-white text-4xl transition-all duration-300 hover:scale-110 z-10"
+              className="absolute top-6 right-6 text-cotton/60 hover:text-apricot text-4xl transition-all duration-300 hover:scale-110 z-10"
             >
               ×
             </button>
@@ -156,11 +152,6 @@ export default function Home() {
           }
         }
         
-        @keyframes glow {
-          0%, 100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
-          50% { text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6); }
-        }
-        
         @keyframes modal-overlay {
           from { opacity: 0; }
           to { opacity: 1; }
@@ -189,10 +180,6 @@ export default function Home() {
           animation: fade-in-up 1s ease-out 0.6s both;
         }
         
-        .animate-glow {
-          animation: glow 3s ease-in-out infinite;
-        }
-        
         .animate-modal-overlay {
           animation: modal-overlay 0.3s ease-out;
         }
@@ -211,8 +198,8 @@ function IntroModal() {
 
   return (
     <div className="p-16">
-      <h2 className="text-4xl font-bold mb-6 tracking-widest">START HERE</h2>
-      <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-white mb-10"></div>
+      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">START HERE</h2>
+      <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
       <div className="mb-10">
         <Image
@@ -224,8 +211,8 @@ function IntroModal() {
         />
       </div>
 
-      <div className="space-y-6 text-gray-200 text-lg leading-relaxed">
-        <p className="text-xl text-white font-medium">
+      <div className="space-y-6 text-cloud-gray text-lg leading-relaxed font-coming-soon">
+        <p className="text-xl text-cotton font-medium">
           Are you tired of feeling stuck, going through the motions, wondering "Is this it?"
         </p>
         
@@ -235,8 +222,8 @@ function IntroModal() {
           when inside you're questioning everything.
         </p>
         
-        <div className="bg-gradient-to-r from-yellow-400/20 to-orange-400/20 p-6 rounded-lg border-l-4 border-yellow-400">
-          <p className="font-semibold text-yellow-300 text-xl mb-3">What if I told you...</p>
+        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-6 rounded-lg border-l-4 border-apricot">
+          <p className="font-semibold text-apricot text-xl mb-3 font-urbanist">What if I told you...</p>
           <p>
             You're closer to your breakthrough than you think. That restless feeling? It's your soul calling you toward your purpose. 
             The confusion? It's because you've been following someone else's blueprint for success instead of creating your own.
@@ -251,11 +238,11 @@ function IntroModal() {
         <div className="mt-10 space-y-4">
           <button
             onClick={() => setShowNewsletterModal(true)}
-            className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-4 px-8 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl uppercase tracking-wider"
+            className="w-full btn-primary"
           >
             Get My Free "Life Audit" Tool
           </button>
-          <p className="text-center text-sm text-gray-400">
+          <p className="text-center text-sm text-lavender">
             Discover exactly where you're stuck and your next steps forward (5-minute assessment)
           </p>
         </div>
@@ -270,8 +257,8 @@ function IntroModal() {
 function WorkModal() {
   return (
     <div className="p-16">
-      <h2 className="text-4xl font-bold mb-6 tracking-widest">HOW I HELP</h2>
-      <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-white mb-10"></div>
+      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">HOW I HELP</h2>
+      <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
       <div className="mb-10">
         <Image
@@ -283,14 +270,14 @@ function WorkModal() {
         />
       </div>
 
-      <div className="space-y-8 text-gray-200">
-        <p className="text-xl text-white font-medium leading-relaxed">
+      <div className="space-y-8 text-cloud-gray font-coming-soon">
+        <p className="text-xl text-cotton font-medium leading-relaxed">
           I don't believe in one-size-fits-all solutions. Your journey is unique, and your transformation should be too.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-xl border border-blue-400/30">
-            <h3 className="text-2xl font-bold mb-4 text-blue-300">Purpose Discovery</h3>
+          <div className="bg-gradient-to-br from-amethyst/20 to-lavender/20 p-8 rounded-xl border border-amethyst/30">
+            <h3 className="text-2xl font-bold mb-4 text-amethyst font-urbanist">Purpose Discovery</h3>
             <p className="mb-4">
               Stop guessing what you're "supposed" to do. Uncover your authentic purpose using proven frameworks 
               that cut through the noise and get to your core.
@@ -302,8 +289,8 @@ function WorkModal() {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 p-8 rounded-xl border border-green-400/30">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Breakthrough Barriers</h3>
+          <div className="bg-gradient-to-br from-sage/20 to-dusty-rose/20 p-8 rounded-xl border border-sage/30">
+            <h3 className="text-2xl font-bold mb-4 text-sage font-urbanist">Breakthrough Barriers</h3>
             <p className="mb-4">
               Identify and dissolve the invisible walls keeping you stuck. Transform limiting beliefs into 
               empowering truths that propel you forward.
@@ -315,8 +302,8 @@ function WorkModal() {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 p-8 rounded-xl border border-orange-400/30">
-            <h3 className="text-2xl font-bold mb-4 text-orange-300">Strategic Action</h3>
+          <div className="bg-gradient-to-br from-apricot/20 to-dusty-rose/20 p-8 rounded-xl border border-apricot/30">
+            <h3 className="text-2xl font-bold mb-4 text-apricot font-urbanist">Strategic Action</h3>
             <p className="mb-4">
               Bridge the gap between where you are and where you want to be with clear, actionable steps 
               tailored to your unique situation.
@@ -328,8 +315,8 @@ function WorkModal() {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-xl border border-purple-400/30">
-            <h3 className="text-2xl font-bold mb-4 text-purple-300">Lasting Transformation</h3>
+          <div className="bg-gradient-to-br from-lavender/20 to-deep-plum/20 p-8 rounded-xl border border-lavender/30">
+            <h3 className="text-2xl font-bold mb-4 text-lavender font-urbanist">Lasting Transformation</h3>
             <p className="mb-4">
               Create sustainable change that sticks. Build new habits and mindsets that support 
               your growth long after our work together ends.
@@ -342,13 +329,13 @@ function WorkModal() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-yellow-400/20 to-orange-400/20 p-8 rounded-lg border border-yellow-400/50 text-center">
-          <h4 className="text-2xl font-bold mb-4 text-yellow-300">Ready to stop settling?</h4>
+        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50 text-center">
+          <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">Ready to stop settling?</h4>
           <p className="mb-6 text-lg">
             Book a free 30-minute clarity call where we'll identify your biggest obstacle 
             and create a roadmap to overcome it.
           </p>
-          <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-wider">
+          <button className="btn-primary">
             Book Your Free Call
           </button>
         </div>
@@ -360,8 +347,8 @@ function WorkModal() {
 function AboutModal() {
   return (
     <div className="p-16">
-      <h2 className="text-4xl font-bold mb-6 tracking-widest">MY STORY</h2>
-      <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-white mb-10"></div>
+      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">MY STORY</h2>
+      <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div>
@@ -374,8 +361,8 @@ function AboutModal() {
           />
         </div>
         
-        <div className="space-y-6 text-gray-200 leading-relaxed">
-          <p className="text-xl text-white font-medium">
+        <div className="space-y-6 text-cloud-gray leading-relaxed font-coming-soon">
+          <p className="text-xl text-cotton font-medium">
             I used to be the poster child for "having it all together."
           </p>
           
@@ -389,8 +376,8 @@ function AboutModal() {
             I had climbed the ladder only to discover it was leaning against the wrong wall.
           </p>
           
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-6 rounded-lg border-l-4 border-blue-400">
-            <p className="font-semibold text-blue-300 mb-2">The moment everything changed:</p>
+          <div className="bg-gradient-to-r from-amethyst/20 to-lavender/20 p-6 rounded-lg border-l-4 border-amethyst">
+            <p className="font-semibold text-amethyst mb-2 font-urbanist">The moment everything changed:</p>
             <p>
               I stopped asking "What should I do?" and started asking "Who am I really, and what do I actually want?" 
               That shift in perspective changed everything.
@@ -399,7 +386,7 @@ function AboutModal() {
         </div>
       </div>
 
-      <div className="mt-12 space-y-6 text-gray-200">
+      <div className="mt-12 space-y-6 text-cloud-gray font-coming-soon">
         <p>
           Today, I wake up excited about my life. I've built a business I love, relationships that fulfill me, 
           and most importantly, I know who I am and what I stand for. But it wasn't luck or chance—it was a process.
@@ -414,8 +401,8 @@ function AboutModal() {
               height={200}
               className="mx-auto mb-4 rounded-lg shadow-lg"
             />
-            <h4 className="font-semibold text-white">Certified Life Coach</h4>
-            <p className="text-sm text-gray-400">Jay Shetty Certification School</p>
+            <h4 className="font-semibold text-cotton font-urbanist">Certified Life Coach</h4>
+            <p className="text-sm text-lavender">Jay Shetty Certification School</p>
           </div>
           
           <div className="text-center">
@@ -426,8 +413,8 @@ function AboutModal() {
               height={200}
               className="mx-auto mb-4 rounded-lg shadow-lg h-32 w-32 object-cover"
             />
-            <h4 className="font-semibold text-white">Continuous Learner</h4>
-            <p className="text-sm text-gray-400">Always growing, always evolving</p>
+            <h4 className="font-semibold text-cotton font-urbanist">Continuous Learner</h4>
+            <p className="text-sm text-lavender">Always growing, always evolving</p>
           </div>
           
           <div className="text-center">
@@ -438,13 +425,13 @@ function AboutModal() {
               height={200}
               className="mx-auto mb-4 rounded-lg shadow-lg h-32 w-32 object-cover"
             />
-            <h4 className="font-semibold text-white">Daily Practitioner</h4>
-            <p className="text-sm text-gray-400">Walking the walk, not just talking</p>
+            <h4 className="font-semibold text-cotton font-urbanist">Daily Practitioner</h4>
+            <p className="text-sm text-lavender">Walking the walk, not just talking</p>
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-yellow-400/20 to-orange-400/20 p-8 rounded-lg border border-yellow-400/50 text-center mt-10">
-          <h4 className="text-2xl font-bold mb-4 text-yellow-300">My Mission</h4>
+        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50 text-center mt-10">
+          <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">My Mission</h4>
           <p className="text-lg mb-6">
             To help you stop living someone else's life and start creating the one that's truly yours. 
             Because you deserve more than just getting by—you deserve to thrive.
@@ -458,12 +445,12 @@ function AboutModal() {
 function ContactModal() {
   return (
     <div className="p-16">
-      <h2 className="text-4xl font-bold mb-6 tracking-widest">WORK WITH ME</h2>
-      <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-white mb-10"></div>
+      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">WORK WITH ME</h2>
+      <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
       <div className="grid lg:grid-cols-2 gap-12">
-        <div className="space-y-6 text-gray-200">
-          <p className="text-xl text-white font-medium">
+        <div className="space-y-6 text-cloud-gray font-coming-soon">
+          <p className="text-xl text-cotton font-medium">
             Ready to stop settling and start thriving?
           </p>
           
@@ -472,8 +459,8 @@ function ContactModal() {
             This isn't about quick fixes or surface-level changes—this is about deep, lasting transformation.
           </p>
 
-          <div className="bg-gradient-to-r from-green-600/20 to-teal-600/20 p-6 rounded-lg border border-green-400/30">
-            <h4 className="text-xl font-bold mb-3 text-green-300">Perfect for you if:</h4>
+          <div className="bg-gradient-to-r from-sage/20 to-dusty-rose/20 p-6 rounded-lg border border-sage/30">
+            <h4 className="text-xl font-bold mb-3 text-sage font-urbanist">Perfect for you if:</h4>
             <ul className="space-y-2">
               <li>• You're successful but unfulfilled</li>
               <li>• You know there's more to life but don't know how to find it</li>
@@ -482,8 +469,8 @@ function ContactModal() {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-r from-red-600/20 to-pink-600/20 p-6 rounded-lg border border-red-400/30">
-            <h4 className="text-xl font-bold mb-3 text-red-300">Not for you if:</h4>
+          <div className="bg-gradient-to-r from-dusty-rose/20 to-deep-plum/20 p-6 rounded-lg border border-dusty-rose/30">
+            <h4 className="text-xl font-bold mb-3 text-dusty-rose font-urbanist">Not for you if:</h4>
             <ul className="space-y-2">
               <li>• You're looking for someone to fix your problems for you</li>
               <li>• You want quick fixes without putting in effort</li>
@@ -494,60 +481,60 @@ function ContactModal() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-gradient-to-r from-yellow-400/20 to-orange-400/20 p-8 rounded-lg border border-yellow-400/50 text-center">
-            <h4 className="text-2xl font-bold mb-4 text-yellow-300">Free Clarity Call</h4>
-            <p className="mb-6">
+          <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50 text-center">
+            <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">Free Clarity Call</h4>
+            <p className="mb-6 font-coming-soon">
               30 minutes to identify your biggest obstacle and create a clear path forward. 
               No sales pitch, just value.
             </p>
-            <button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 px-6 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-xl uppercase tracking-wider">
+            <button className="w-full btn-primary">
               Book Now
             </button>
           </div>
 
           <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-gray-300">
+              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-lavender font-coming-soon">
                 Name *
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-400/50 transition-colors text-white"
+                className="w-full px-4 py-3 bg-lavender/20 border border-amethyst/30 rounded-lg focus:outline-none focus:border-apricot focus:bg-cloud-gray/20 transition-colors text-cotton placeholder-amethyst/60"
                 placeholder="Your full name"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-gray-300">
+              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-lavender font-coming-soon">
                 Email *
               </label>
               <input
                 type="email"
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-400/50 transition-colors text-white"
+                className="w-full px-4 py-3 bg-lavender/20 border border-amethyst/30 rounded-lg focus:outline-none focus:border-apricot focus:bg-cloud-gray/20 transition-colors text-cotton placeholder-amethyst/60"
                 placeholder="your@email.com"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-gray-300">
+              <label className="block text-sm font-medium mb-2 uppercase tracking-wider text-lavender font-coming-soon">
                 What's your biggest challenge right now? *
               </label>
               <textarea
                 rows={4}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-400/50 transition-colors resize-none text-white"
+                className="w-full px-4 py-3 bg-lavender/20 border border-amethyst/30 rounded-lg focus:outline-none focus:border-apricot focus:bg-cloud-gray/20 transition-colors resize-none text-cotton placeholder-amethyst/60"
                 placeholder="Be specific - this helps me prepare for our call..."
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium tracking-wider uppercase hover:from-blue-500 hover:to-purple-500 transition-all duration-300 rounded-full transform hover:scale-105 shadow-xl"
+              className="w-full btn-accent"
             >
               Send Message
             </button>
           </form>
 
-          <div className="text-center text-sm text-gray-400">
+          <div className="text-center text-sm text-lavender font-coming-soon">
             <p>Usually respond within 24 hours</p>
           </div>
         </div>
@@ -560,29 +547,29 @@ function ContactModal() {
 function NewsletterModal({ onClose }) {
   return (
     <div className="fixed inset-0 z-60 flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-black/70" onClick={onClose} />
-      <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl max-w-md w-full border border-yellow-400/30 shadow-2xl">
+      <div className="absolute inset-0 bg-deep-plum/70" onClick={onClose} />
+      <div className="relative glass-dark p-8 rounded-xl max-w-md w-full shadow-2xl">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl"
+          className="absolute top-4 right-4 text-cotton/60 hover:text-apricot text-2xl"
         >
           ×
         </button>
         
         <div className="text-center">
           <div className="mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
+            <div className="w-16 h-16 bg-gradient-to-r from-apricot to-sage rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-midnight-ink" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Get Your Free Tools!</h3>
-            <p className="text-gray-300 text-sm">
+            <h3 className="text-2xl font-bold text-cotton mb-2 font-urbanist">Get Your Free Tools!</h3>
+            <p className="text-cloud-gray text-sm font-coming-soon">
               Enter your email and I'll send you the Life Audit Tool plus 2 bonus resources:
             </p>
           </div>
           
-          <ul className="text-left text-sm text-gray-300 mb-6 space-y-2">
+          <ul className="text-left text-sm text-cloud-gray mb-6 space-y-2 font-coming-soon">
             <li>✓ Life Audit Assessment (5 min)</li>
             <li>✓ Values Clarification Worksheet</li>
             <li>✓ Purpose Discovery Guide</li>
@@ -592,17 +579,17 @@ function NewsletterModal({ onClose }) {
             <input
               type="email"
               placeholder="Enter your best email"
-              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-yellow-400 transition-colors"
+              className="w-full px-4 py-3 bg-lavender/20 border border-amethyst/30 rounded-lg text-cotton focus:outline-none focus:border-apricot transition-colors placeholder-amethyst/60"
             />
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-3 rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 uppercase tracking-wider"
+              className="w-full btn-primary"
             >
               Send Me The Tools
             </button>
           </form>
           
-          <p className="text-xs text-gray-400 mt-4">
+          <p className="text-xs text-lavender mt-4 font-coming-soon">
             No spam, ever. Unsubscribe anytime.
           </p>
         </div>

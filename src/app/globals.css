@@ -3,16 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 60, 51, 66; /* Midnight Ink */
+  --background-start-rgb: 245, 240, 234; /* Cotton */
+  --background-end-rgb: 245, 240, 234; /* Cotton */
+  
+  /* Internal Haven Color Variables */
+  --cotton: #F5F0EA;
+  --amethyst: #786B89;
+  --lavender: #CBBFDD;
+  --apricot: #EFA986;
+  --sage: #ACB087;
+  --deep-plum: #5D4B69;
+  --dusty-rose: #D9A5B3;
+  --cloud-gray: #DAD7D2;
+  --midnight-ink: #3C3342;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 245, 240, 234; /* Cotton for dark mode */
+    --background-start-rgb: 60, 51, 66; /* Midnight Ink */
+    --background-end-rgb: 93, 75, 105; /* Deep Plum */
   }
 }
 
@@ -100,7 +111,7 @@ body {
     font-family: 'Urbanist', sans-serif;
   }
 
-  p, span, div, a, button, input, textarea, label {
+  p, span, div, a, button, input, textarea, label, body {
     font-family: 'Coming Soon', cursive;
   }
 
@@ -125,186 +136,83 @@ body {
 }
 
 @layer components {
+  /* Button Components */
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300;
+    @apply bg-apricot hover:bg-sage text-midnight-ink font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-urbanist tracking-wider uppercase;
   }
   
   .btn-secondary {
-    @apply bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded transition-colors duration-300;
-  }
-  
-  .section-heading {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-center;
+    @apply bg-transparent hover:bg-lavender text-amethyst font-semibold hover:text-deep-plum py-3 px-8 border-2 border-amethyst hover:border-lavender rounded-full transition-all duration-300 transform hover:scale-105 font-urbanist tracking-wider uppercase;
   }
 
-  /* Enhanced button animations */
-  .animate-button {
-    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  .btn-accent {
+    @apply bg-dusty-rose hover:bg-deep-plum text-cotton font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-urbanist tracking-wider uppercase;
   }
 
-  /* Enhanced Gradient text effects */
-  .gradient-text {
-    @apply bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent;
-    font-family: 'Urbanist', sans-serif;
+  /* Text Effects */
+  .text-glow-cotton {
+    @apply text-cotton;
+    text-shadow: 0 0 10px rgba(245, 240, 234, 0.8),
+                 0 0 20px rgba(245, 240, 234, 0.6),
+                 0 0 30px rgba(245, 240, 234, 0.4);
   }
 
-  .gradient-text-purple {
-    @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent;
-    font-family: 'Urbanist', sans-serif;
+  .text-glow-amethyst {
+    @apply text-amethyst;
+    text-shadow: 0 0 10px rgba(120, 107, 137, 0.8),
+                 0 0 20px rgba(120, 107, 137, 0.6),
+                 0 0 30px rgba(120, 107, 137, 0.4);
   }
 
-  .gradient-text-blue {
-    @apply bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-500 bg-clip-text text-transparent;
-    font-family: 'Urbanist', sans-serif;
+  .text-glow-apricot {
+    @apply text-apricot;
+    text-shadow: 0 0 10px rgba(239, 169, 134, 0.8),
+                 0 0 20px rgba(239, 169, 134, 0.6),
+                 0 0 30px rgba(239, 169, 134, 0.4);
   }
 
-  .gradient-text-sunset {
-    @apply bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-clip-text text-transparent;
-    font-family: 'Urbanist', sans-serif;
+  /* Gradient Text Effects */
+  .gradient-text-primary {
+    @apply bg-gradient-to-r from-apricot to-sage bg-clip-text text-transparent font-urbanist;
   }
 
-  /* Glowing text effects */
-  .text-glow-white {
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                 0 0 20px rgba(255, 255, 255, 0.6),
-                 0 0 30px rgba(255, 255, 255, 0.4);
-    font-family: 'Urbanist', sans-serif;
+  .gradient-text-secondary {
+    @apply bg-gradient-to-r from-amethyst via-lavender to-dusty-rose bg-clip-text text-transparent font-urbanist;
   }
 
-  .text-glow-blue {
-    color: #60a5fa;
-    text-shadow: 0 0 10px rgba(96, 165, 250, 0.8),
-                 0 0 20px rgba(96, 165, 250, 0.6),
-                 0 0 30px rgba(96, 165, 250, 0.4);
-    font-family: 'Urbanist', sans-serif;
+  .gradient-text-warm {
+    @apply bg-gradient-to-r from-apricot via-dusty-rose to-deep-plum bg-clip-text text-transparent font-urbanist;
   }
 
-  .text-glow-purple {
-    color: #a855f7;
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.8),
-                 0 0 20px rgba(168, 85, 247, 0.6),
-                 0 0 30px rgba(168, 85, 247, 0.4);
-    font-family: 'Urbanist', sans-serif;
-  }
-
-  .text-glow-gold {
-    color: #fbbf24;
-    text-shadow: 0 0 10px rgba(251, 191, 36, 0.8),
-                 0 0 20px rgba(251, 191, 36, 0.6),
-                 0 0 30px rgba(251, 191, 36, 0.4);
-    font-family: 'Urbanist', sans-serif;
-  }
-
-  .text-glow-pink {
-    color: #ec4899;
-    text-shadow: 0 0 10px rgba(236, 72, 153, 0.8),
-                 0 0 20px rgba(236, 72, 153, 0.6),
-                 0 0 30px rgba(236, 72, 153, 0.4);
-    font-family: 'Urbanist', sans-serif;
-  }
-
-  /* Glass morphism effect */
+  /* Glass Effects */
   .glass {
-    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-xl;
+    @apply backdrop-blur-md bg-cotton/10 border border-lavender/20 shadow-xl;
   }
 
-  /* Responsive text utilities */
-  .text-responsive-xs { @apply text-xs sm:text-sm md:text-base; }
-  .text-responsive-sm { @apply text-sm sm:text-base md:text-lg; }
-  .text-responsive-base { @apply text-base sm:text-lg md:text-xl; }
-  .text-responsive-lg { @apply text-lg sm:text-xl md:text-2xl; }
-  .text-responsive-xl { @apply text-xl sm:text-2xl md:text-3xl; }
-  .text-responsive-2xl { @apply text-2xl sm:text-3xl md:text-4xl; }
-  .text-responsive-3xl { @apply text-3xl sm:text-4xl md:text-5xl; }
-}
-
-/* Enhanced animations */
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.8) translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+  .glass-dark {
+    @apply backdrop-blur-md bg-midnight-ink/20 border border-amethyst/30 shadow-xl;
   }
 }
 
-@keyframes slideInFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
-  }
-}
-
-@keyframes pulse-glow-color {
-  0%, 100% {
-    text-shadow: 0 0 10px currentColor,
-                 0 0 20px currentColor,
-                 0 0 30px currentColor;
-  }
-  50% {
-    text-shadow: 0 0 20px currentColor,
-                 0 0 30px currentColor,
-                 0 0 40px currentColor;
-  }
-}
-
-@keyframes rainbow-glow {
+/* Internal Haven Animations */
+@keyframes palette-glow {
   0% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    text-shadow: 0 0 10px var(--apricot), 0 0 20px var(--apricot), 0 0 30px var(--apricot);
   }
-  16.66% {
-    text-shadow: 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 30px #ff8000;
-  }
-  33.33% {
-    text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00;
+  25% {
+    text-shadow: 0 0 10px var(--dusty-rose), 0 0 20px var(--dusty-rose), 0 0 30px var(--dusty-rose);
   }
   50% {
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    text-shadow: 0 0 10px var(--lavender), 0 0 20px var(--lavender), 0 0 30px var(--lavender);
   }
-  66.66% {
-    text-shadow: 0 0 10px #0080ff, 0 0 20px #0080ff, 0 0 30px #0080ff;
-  }
-  83.33% {
-    text-shadow: 0 0 10px #8000ff, 0 0 20px #8000ff, 0 0 30px #8000ff;
+  75% {
+    text-shadow: 0 0 10px var(--amethyst), 0 0 20px var(--amethyst), 0 0 30px var(--amethyst);
   }
   100% {
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    text-shadow: 0 0 10px var(--apricot), 0 0 20px var(--apricot), 0 0 30px var(--apricot);
   }
 }
 
-.animate-fade-in-scale {
-  animation: fadeInScale 0.6s ease-out;
-}
-
-.animate-slide-in {
-  animation: slideInFromBottom 0.8s ease-out;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.animate-pulse-glow-text {
-  animation: pulse-glow-color 2s ease-in-out infinite;
-}
-
-.animate-rainbow-glow {
-  animation: rainbow-glow 3s linear infinite;
-  font-family: 'Urbanist', sans-serif;
+.animate-palette-glow {
+  animation: palette-glow 4s ease-in-out infinite;
 }
