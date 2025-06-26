@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.16",
     "framer-motion": "^10.16.4",
     "next": "latest",
     "react": "^18.2.0",
@@ -19,6 +18,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "latest",
     "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
