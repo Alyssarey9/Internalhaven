@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'bellota': ['Bellota', 'cursive'],
-        'gochi': ['Gochi Hand', 'cursive'],
+        'urbanist': ['Urbanist', 'sans-serif'],
+        'coming-soon': ['Coming Soon', 'cursive'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],

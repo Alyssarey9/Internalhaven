@@ -19,7 +19,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
-  font-family: 'Bellota', cursive;
+  font-family: 'Coming Soon', cursive;
 }
 
 @layer base {
@@ -91,17 +91,17 @@ body {
   .heading, 
   .title, 
   .font-heading {
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
     font-weight: 700;
   }
 
   /* Special class for the main heading */
   .main-title {
-    font-family: 'Gochi Hand', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   p, span, div, a, button, input, textarea, label {
-    font-family: 'Bellota', cursive;
+    font-family: 'Coming Soon', cursive;
   }
 
   /* Custom scrollbar for modal content */
@@ -145,22 +145,22 @@ body {
   /* Enhanced Gradient text effects */
   .gradient-text {
     @apply bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent;
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   .gradient-text-purple {
     @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent;
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   .gradient-text-blue {
     @apply bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-500 bg-clip-text text-transparent;
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   .gradient-text-sunset {
     @apply bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-clip-text text-transparent;
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   /* Glowing text effects */
@@ -169,7 +169,7 @@ body {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
                  0 0 20px rgba(255, 255, 255, 0.6),
                  0 0 30px rgba(255, 255, 255, 0.4);
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   .text-glow-blue {
@@ -177,7 +177,7 @@ body {
     text-shadow: 0 0 10px rgba(96, 165, 250, 0.8),
                  0 0 20px rgba(96, 165, 250, 0.6),
                  0 0 30px rgba(96, 165, 250, 0.4);
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   .text-glow-purple {
@@ -185,7 +185,7 @@ body {
     text-shadow: 0 0 10px rgba(168, 85, 247, 0.8),
                  0 0 20px rgba(168, 85, 247, 0.6),
                  0 0 30px rgba(168, 85, 247, 0.4);
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   .text-glow-gold {
@@ -193,7 +193,7 @@ body {
     text-shadow: 0 0 10px rgba(251, 191, 36, 0.8),
                  0 0 20px rgba(251, 191, 36, 0.6),
                  0 0 30px rgba(251, 191, 36, 0.4);
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   .text-glow-pink {
@@ -201,7 +201,7 @@ body {
     text-shadow: 0 0 10px rgba(236, 72, 153, 0.8),
                  0 0 20px rgba(236, 72, 153, 0.6),
                  0 0 30px rgba(236, 72, 153, 0.4);
-    font-family: 'Bellota', cursive;
+    font-family: 'Urbanist', sans-serif;
   }
 
   /* Glass morphism effect */
@@ -306,5 +306,5 @@ body {
 
 .animate-rainbow-glow {
   animation: rainbow-glow 3s linear infinite;
-  font-family: 'Bellota', cursive;
+  font-family: 'Urbanist', sans-serif;
 }

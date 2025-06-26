@@ -61,9 +61,9 @@ export default function Home() {
         {/* Title and Subtitle */}
         <div className="text-center mb-16 max-w-4xl animate-fade-in-up">
           <h1 className="text-6xl md:text-8xl font-gochi text-white mb-8 tracking-widest animate-glow">
-            INTERNAL HAVEN
+            Internal Haven
           </h1>
-          <p className="text-white/90 text-base md:text-lg tracking-wider leading-relaxed uppercase max-w-3xl mx-auto">
+          <p className="text-white/90 text-base md:text-lg tracking-wider leading-relaxed max-w-3xl mx-auto">
             Stop feeling stuck, overwhelmed, and unsure of your next step. 
             <span className="block mt-2 text-yellow-300">
               Discover your purpose, break through barriers, and create the fulfilling life you deserve.
