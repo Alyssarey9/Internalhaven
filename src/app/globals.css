@@ -142,7 +142,7 @@ body {
   }
   
   .btn-secondary {
-    @apply bg-transparent hover:bg-lavender text-amethyst font-semibold hover:text-deep-plum py-3 px-8 border-2 border-amethyst hover:border-lavender rounded-full transition-all duration-300 transform hover:scale-105 font-urbanist tracking-wider uppercase;
+    @apply bg-transparent hover:bg-lavender text-cotton/80 font-semibold hover:text-deep-plum py-3 px-8 border-2 border-cotton/80 hover:border-lavender rounded-full transition-all duration-300 transform hover:scale-105 font-urbanist tracking-wider uppercase;
   }
 
   .btn-accent {

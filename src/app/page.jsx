@@ -13,13 +13,13 @@ export default function Home() {
       {/* Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/images/sunset-river-view-stockcake-background.jpg"
+          src="/images/background_1.jpg"
           alt="Peaceful mountain landscape"
           fill
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-deep-plum/70 via-amethyst/50 to-lavender/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50" />
       </div>
 
       {/* Main Content */}
@@ -203,7 +203,7 @@ function IntroModal() {
       
       <div className="mb-10">
         <Image
-          src="/images/Me meditating photo.jpg"
+          src="/images/about-me_landscape_1.jpg"
           alt="Peaceful meditation moment"
           width={800}
           height={400}
