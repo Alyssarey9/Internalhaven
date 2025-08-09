@@ -11,7 +11,7 @@ export default function AboutModal() {
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div>
           <Image
-            src="/images/Headshot of Me for About Me Page.jpg"
+            src="/images/about-me_selfie_5.jpg"
             alt="Personal headshot"
             width={500}
             height={600}
@@ -61,7 +61,7 @@ export default function AboutModal() {
           
           <div className="text-center">
             <Image
-              src="/images/Me reading Photo.jpg"
+              src="/images/about-me_portrait_6.jpg"
               alt="Volleyball coaching"
               width={200}
               height={200}
@@ -85,7 +85,7 @@ export default function AboutModal() {
           
           <div className="text-center">
             <Image
-              src="/images/peaceful vibes with journal.JPEG"
+              src="/images/about-me_landscape_6.jpg"
               alt="Learning drums"
               width={200}
               height={200}
