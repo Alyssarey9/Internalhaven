@@ -63,7 +63,9 @@ export default function FreebiesModal() {
       <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
 
       <div className="text-cloud-gray font-coming-soon space-y-6">
-        <p>Unlock your full potential with these 3 powerful life coaching tools that will help support your personal growth and cultivate more mindfulness into your daily habits and actions. Whether it's enhancing emotional intelligence or building a positive mindset, these tools are here to guide you on a journey of self-discovery and transformation. Explore them on my website and take the first step toward a more empowered, fulfilling life!</p>
+        <div className="bg-gradient-to-r from-sage/10 to-sage/30 p-8 rounded-lg border border-sage/50">
+          <p className="text-lg">Unlock your full potential with these 3 powerful life coaching tools that will help support your personal growth and cultivate more mindfulness into your daily habits and actions. Whether it's enhancing emotional intelligence or building a positive mindset, these tools are here to guide you on a journey of self-discovery and transformation. Explore them on my website and take the first step toward a more empowered, fulfilling life!</p>
+        </div>
 
         <div className="space-y-4">
           <div>
@@ -158,7 +160,7 @@ export default function FreebiesModal() {
           
           <div className="space-y-4">
             <p>With How to Be Your Own Bestie, you'll build a stronger foundation of self-love and inner support. Then, dive into Tips to Cultivate a Growth Mindset to open yourself up to new possibilities and embrace your full potential. Finally, the Emotion Self-Regulation Guide will equip you with practical tools to navigate life's emotional ups and downs with confidence and clarity.</p>
-            <p className="font-semibold text-apricot">These tools are just the BEGINNING!</p>
+            <p className="font-semibold text-apricot flex justify-center">These tools are just the BEGINNING!</p>
             <p>Let's work together to create a life of peace, purpose, and self-empowerment. Ready to take the next step?</p>
             
             <div className="pt-2 flex justify-center">

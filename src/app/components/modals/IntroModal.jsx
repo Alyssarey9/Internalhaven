@@ -46,14 +46,14 @@ export default function IntroModal() {
           </p>
         </div>
 
-        <p className="text-xl text-apricot font-medium font-urbanist italic text-center py-4">
+        <p className="text-3xl text-sage font-medium font-urbanist italic text-center py-4">
           It's time to make yourself & your growth a priority.
         </p>
 
-        <div className="mt-10">
+        <div className="mt-10 flex justify-center">
           <CalendlyButton
-            fullWidth={true}
             text="Schedule Your FREE Clarity Call"
+            size="large"
           />
         </div>
       </div>
