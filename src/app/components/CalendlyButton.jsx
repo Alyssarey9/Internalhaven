@@ -38,7 +38,7 @@ export default function CalendlyButton({
 
     try {
       // Use the direct Calendly URL if provided, otherwise use the default
-      const calendlyUrl = eventType || 'https://calendly.com/alyssarey9/45min';
+      const calendlyUrl = eventType || 'https://calendly.com/alyssarey9/60min';
       
       // Add current month/year to the URL to ensure it's up to date
       const now = new Date();
