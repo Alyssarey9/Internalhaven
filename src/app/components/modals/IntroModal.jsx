@@ -2,14 +2,14 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import NewsletterModal from './NewsletterModal';
+import CalendlyButton from '../CalendlyButton';
 
 export default function IntroModal() {
-  const [showNewsletterModal, setShowNewsletterModal] = useState(false);
+  
 
   return (
     <div className="p-16">
-      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">START HERE</h2>
+      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">FIND YOUR HAVEN</h2>
       <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
       <div className="mb-10">
@@ -24,51 +24,41 @@ export default function IntroModal() {
 
       <div className="space-y-6 text-cloud-gray text-lg leading-relaxed font-coming-soon">
         <p className="text-xl text-cotton font-medium">
-          As a woman in her 20s to 40s, life can feel like a constant balancing act.
+          Could your inner haven be closer than you think?
         </p>
-        
         <p>
-          We're navigating the pressures of career, relationships, and personal growth while trying to meet societal expectations 
-          and care for those around us. It's easy to feel overwhelmed, stuck, or like we're never doing enough. Struggles with 
-          self-doubt, perfectionism, and burnout may leave us wondering if true balance & fulfillment are even possible.
+          For many women today, life can feel like a constant balancing act, caught between what we want and what’s expected of us. We juggle career pressures, relationships, personal growth, and the needs of those around us, often leaving us overwhelmed, stuck, or feeling like we’re never quite enough. Self-doubt, perfectionism, and burnout can make true balance and fulfillment seem out of reach.
         </p>
-        
+        <p>
+          What we really crave is clarity, purpose, and a deep sense of peace, a personal space where we feel confident, empowered, and free to live authentically. A place where prioritizing ourselves doesn’t come with guilt but with joy. We long to reclaim our time, our health, and our energy so we can build a life that truly reflects our values.
+        </p>
+        <p>
+          I’m here to help you discover that haven within yourself. Together, we’ll gently untangle the doubts and habits holding you back and replace them with simple, effective tools to bring clarity, calm, and balance to your everyday life. Step by step, you’ll learn to manage stress, quiet the inner critic, and reconnect with what truly matters. Let’s create a life that feels authentic, meaningful, and filled with freedom. Your Internal Haven awaits.
+        </p>
+
         <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-6 rounded-lg border-l-4 border-apricot">
-          <p className="font-semibold text-apricot text-xl mb-3 font-urbanist">But what we truly long for...</p>
+          <p className="font-semibold text-apricot text-xl mb-3 font-urbanist">MY PURPOSE</p>
           <p>
-            Is clarity and purpose — a sense of direction that aligns with who we truly are. We want to feel confident, 
-            empowered, and at peace in our own skin. We dream of living authentically, with the freedom to prioritize our 
-            needs without guilt. Above all, we're ready to reclaim our time, our health, & our energy to build a life that 
-            feels meaningful and aligned with our values.
+            I’m passionate about helping women connect with their inner wisdom by exploring their emotions and thought patterns. Through nurturing self-love, self-acceptance, and emotional intelligence, I support my clients in building lasting confidence and resilience, which leads to a more peaceful life.
+          </p>
+          <p className="mt-4">
+            My coaching approach combines mindfulness practices, personal growth strategies, and a safe, supportive space where clients can overcome challenges, gain clarity, and make empowered choices. Together, we create a meaningful path toward a life filled with intention and purpose.
           </p>
         </div>
 
-        <p>
-          I'm here to help you move from feeling stuck and overwhelmed to confident and aligned. Together, we'll tackle the 
-          doubts and habits holding you back and replace them with simple, powerful tools to bring clarity and balance to your life. 
-          You'll learn how to manage stress, quiet self-doubt, and reconnect with what truly matters to you. Step by step, we'll 
-          create a life that feels authentic, meaningful, and full of freedom.
-        </p>
-        
         <p className="text-xl text-apricot font-medium font-urbanist italic text-center py-4">
-          "It's time to make yourself & your growth a priority."
+          It's time to make yourself & your growth a priority.
         </p>
 
-        <div className="mt-10 space-y-4">
-          <button
-            onClick={() => setShowNewsletterModal(true)}
-            className="w-full btn-primary"
-          >
-            Get My Free Mindfulness Tools
-          </button>
-          <p className="text-center text-sm text-lavender">
-            3 powerful tools to support your personal growth and cultivate mindfulness
-          </p>
+        <div className="mt-10">
+          <CalendlyButton
+            fullWidth={true}
+            text="Schedule Your FREE Discovery Call"
+          />
         </div>
       </div>
 
-      {/* Newsletter Modal */}
-      {showNewsletterModal && <NewsletterModal onClose={() => setShowNewsletterModal(false)} />}
+      
     </div>
   );
 } 

@@ -113,7 +113,7 @@ export default function RealReflectionsModal(){
                 </h2>
                 <div className="w-24 h-0.5 bg-gradient-to-r from-apricot via-sage to-apricot mx-auto mb-3 rounded-full shadow-lg"></div>
                 <p className="text-gray-400 text-sm max-w-lg mx-auto">
-                    Discover how life coaching has transformed the lives of real people
+                    Here, you’ll find heartfelt stories from amazing people who’ve taken brave steps toward healing, growth, and self-discovery. Their reflections reveal the power of inner work and the courage to grow, sharing the journey of finding peace within and embracing their true selves, just like you can.
                 </p>
             </div>
             
