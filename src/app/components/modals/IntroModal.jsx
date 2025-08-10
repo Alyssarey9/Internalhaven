@@ -53,7 +53,7 @@ export default function IntroModal() {
         <div className="mt-10">
           <CalendlyButton
             fullWidth={true}
-            text="Schedule Your FREE Discovery Call"
+            text="Schedule Your FREE Clarity Call"
           />
         </div>
       </div>
