@@ -9,7 +9,7 @@ export default function AboutModal() {
       <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
       <div className="grid lg:grid-cols-2 gap-12 items-start">
-        <div>
+        <div className="space-y-6">
           <Image
             src="/images/about-me_selfie_5.jpg"
             alt="Personal headshot"
@@ -17,6 +17,27 @@ export default function AboutModal() {
             height={600}
             className="w-full h-96 object-cover rounded-lg shadow-2xl"
           />
+          
+          <div className="flex gap-6 items-start">
+            <div className="flex-1 bg-gradient-to-r from-amethyst/20 to-lavender/20 p-6 rounded-lg border-l-4 border-amethyst">
+              <p className="font-semibold text-amethyst mb-3 font-urbanist text-lg">My Personal Experience:</p>
+              <p className="leading-relaxed text-cloud-gray">
+                Toward the beginning of 2023, I found myself trapped in a cycle of heavy emotions. As a highly sensitive person, 
+                I felt everything deeply—frustration at being stuck in a job that didn't fulfill me, exhaustion from pouring my 
+                energy into something I wasn't passionate about, and an overwhelming sense of urgency to pursue the things I truly cared about but never had time for.
+              </p>
+            </div>
+            
+            {/* <div className="flex-shrink-0 col-2">
+              <Image
+                src="/images/about-me_little_1.jpg"
+                alt="Personal experience moment"
+                width={300}
+                height={400}
+                className="w-48 h-48 object-cover rounded-lg shadow-lg"
+              />
+            </div> */}
+          </div>
         </div>
         
         <div className="space-y-6 text-cloud-gray leading-relaxed font-coming-soon">
@@ -33,14 +54,15 @@ export default function AboutModal() {
             Whether it's gaining confidence, finding balance, or simply making time for yourself, we'll work together to create meaningful shifts that last.
           </p>
           
-          <div className="bg-gradient-to-r from-amethyst/20 to-lavender/20 p-6 rounded-lg border-l-4 border-amethyst">
-            <p className="font-semibold text-amethyst mb-2 font-urbanist">My Personal Experience:</p>
-            <p>
-              Toward the beginning of 2023, I found myself trapped in a cycle of heavy emotions. As a highly sensitive person, 
-              I felt everything deeply—frustration at being stuck in a job that didn't fulfill me, exhaustion from pouring my 
-              energy into something I wasn't passionate about, and an overwhelming sense of urgency to pursue the things I truly cared about but never had time for.
-            </p>
-          </div>
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/about-me_little_1.jpg"
+              alt="Personal experience moment"
+              width={300}
+              height={400}
+              className="w-full h-full object-cover rounded-lg shadow-lg"
+            />
+          </div> 
         </div>
       </div>
 
