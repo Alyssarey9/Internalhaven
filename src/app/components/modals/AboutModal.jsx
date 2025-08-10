@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import CalendlyButton from '../CalendlyButton';
 
 export default function AboutModal() {
   return (
@@ -140,9 +141,10 @@ export default function AboutModal() {
             I've experienced firsthand what it means to step into alignment, and my mission is to help others do the same. 
             Through my coaching, I guide women to find clarity, confidence, and the freedom to create a life that truly resonates with them.
           </p>
-          <button className="btn-primary">
-            Schedule Your Free Discovery Call
-          </button>
+          <CalendlyButton 
+            text="Schedule Your Free Discovery Call"
+            size="large"
+          />
         </div>
       </div>
     </div>

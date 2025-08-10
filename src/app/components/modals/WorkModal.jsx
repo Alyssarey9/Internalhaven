@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import CalendlyButton from '../CalendlyButton';
 
 export default function WorkModal() {
   return (
@@ -10,7 +11,7 @@ export default function WorkModal() {
       
       <div className="mb-10">
         <Image
-          src="/images/Me coaching Volleyball Smiling.JPG"
+          src="/images/about-me_landscape_1.jpg"
           alt="Coaching in action"
           width={800}
           height={400}
@@ -61,9 +62,10 @@ export default function WorkModal() {
             I combine proven methodologies with personalized support to help you build self-awareness, 
             emotional mastery, and create lasting change in your life.
           </p>
-          <button className="btn-primary">
-            Schedule Your FREE Discovery Call
-          </button>
+          <CalendlyButton 
+            text="Schedule Your FREE Discovery Call"
+            size="large"
+          />
         </div>
       </div>
     </div>

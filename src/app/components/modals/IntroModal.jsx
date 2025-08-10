@@ -14,7 +14,7 @@ export default function IntroModal() {
       
       <div className="mb-10">
         <Image
-          src="/images/about-me_landscape_1.jpg"
+          src="/images/background_17.png"
           alt="Peaceful meditation moment"
           width={800}
           height={400}

@@ -1,5 +1,7 @@
 'use client';
 
+import CalendlyButton from '../CalendlyButton';
+
 export default function ContactModal() {
   return (
     <div className="p-16">
@@ -25,9 +27,10 @@ export default function ContactModal() {
             The real transformation happens as you apply these insights to your daily life. With ongoing support, reflection, and accountability, you'll begin to see meaningful progress toward living a more fulfilled, purpose-driven life. Let's start this journey together!
           </p>
           <div className="text-center">
-            <button className="btn-primary text-lg px-8 py-4">
-              Schedule a FREE Discovery Call Now!
-            </button>
+            <CalendlyButton 
+              text="Schedule a FREE Discovery Call Now!"
+              size="large"
+            />
           </div>
         </div>
 
@@ -39,7 +42,7 @@ export default function ContactModal() {
           
           <div className="grid md:grid-cols-1 gap-6">
             <div className="bg-amethyst/20 p-6 rounded-lg border border-amethyst/30">
-              <h4 className="text-xl font-bold mb-3 text-amethyst font-urbanist">How to be Your Own Bestie</h4>
+              <h4 className="text-xl font-bold mb-3 text-amethyst-10 font-urbanist">How to be Your Own Bestie</h4>
               <p className="text-sm">
                 Unlock the secrets to building a loving, supportive relationship with yourself. This empowering coaching tool guides you through practical steps to boost self-love, nurture your inner dialogue, and show up for yourself like your own biggest cheerleader. It's time to embrace the best friend you already have—you!
               </p>
@@ -72,9 +75,10 @@ export default function ContactModal() {
           <p className="mb-6">
             Let's work together to create a life of peace, purpose, and self-empowerment. Schedule your free discovery call today, and let's start your journey toward transformation!
           </p>
-          <button className="btn-primary text-lg px-8 py-4">
-            Schedule Your Free Discovery Call Today!
-          </button>
+          <CalendlyButton 
+            text="Schedule Your Free Discovery Call Today!"
+            size="large"
+          />
         </div>
       </div>
     </div>

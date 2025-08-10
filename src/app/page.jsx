@@ -8,7 +8,8 @@ import {
   AboutModal,
   ContactModal,
   FreebiesModal,
-  ModalWrapper
+  ModalWrapper,
+  RealReflectionsModal,
 } from './components/modals';
 
 export default function Home() {
@@ -90,6 +91,12 @@ export default function Home() {
           >
             <span className="relative z-10">FREEBIES</span>
           </button>
+          <button
+            onClick={() => setActiveModal('realreflections')}
+            className="btn-secondary"
+          >
+            <span className="relative z-10">Real Reflections</span>
+          </button>
         </div>
 
         {/* Footer */}
@@ -107,6 +114,7 @@ export default function Home() {
         {activeModal === 'about' && <AboutModal />}
         {activeModal === 'contact' && <ContactModal />}
         {activeModal === 'freebies' && <FreebiesModal />}
+        {activeModal === 'realreflections' && <RealReflectionsModal />}
       </ModalWrapper>
 
       <style jsx global>{`
