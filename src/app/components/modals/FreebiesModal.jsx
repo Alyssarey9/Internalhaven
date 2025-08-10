@@ -163,7 +163,7 @@ export default function FreebiesModal() {
             
             <div className="pt-2 flex justify-center">
               <CalendlyButton 
-                text="Schedule Your FREE Discovery Call"
+                text="Schedule Your FREE Clarity Call"
                 size="large"
               />
             </div>

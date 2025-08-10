@@ -21,7 +21,7 @@ export default function AboutModal() {
           
           <div className="flex gap-6 items-start">
             <div className="flex-1 bg-gradient-to-r from-amethyst/20 to-lavender/20 p-6 rounded-lg border-l-4 border-amethyst">
-              <p className="font-semibold text-amethyst mb-3 font-urbanist text-lg">MY PERSONAL EXPERIENCE:</p>
+              <p className="font-semibold text-cotton mb-3 font-urbanist text-lg">MY PERSONAL EXPERIENCE:</p>
               <p className="leading-relaxed text-cloud-gray">
                 Toward the beginning of 2023, I found myself trapped in a cycle of heavy emotions. As a highly sensitive person, I felt everything deeply; frustration at being stuck in a job that didn’t fulfill me, exhaustion from pouring my energy into something I wasn’t passionate about, and an overwhelming sense of urgency to pursue the things I truly cared about but never had enough time for.
               </p>
@@ -67,7 +67,7 @@ export default function AboutModal() {
           
           <div className="text-center">
             <Image
-              src="/images/about-me_portrait_6.jpg"
+              src="/images/about-me_portrait_3.jpg"
               alt="Volleyball coaching"
               width={200}
               height={200}
