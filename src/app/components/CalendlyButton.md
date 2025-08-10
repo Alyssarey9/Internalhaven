@@ -12,15 +12,15 @@ A modularized React component for integrating Calendly scheduling into your appl
 
 ## Setup
 
-1. **Environment Variable**: Add your Calendly personal access token to `.env.local`:
+1. **Direct Calendly URL**: The component uses your direct Calendly booking link by default:
    ```
-   CALENDLY_TOKEN=your_calendly_personal_access_token_here
+   https://calendly.com/alyssarey9/30min
    ```
 
-2. **Get Calendly Token**: 
-   - Go to [Calendly Integrations](https://calendly.com/integrations)
-   - Create a new API key
-   - Copy the personal access token
+2. **Custom URL**: You can override this by passing the `eventType` prop:
+   ```jsx
+   <CalendlyButton eventType="https://calendly.com/your-username/your-event" />
+   ```
 
 ## Usage
 
@@ -71,14 +71,11 @@ import CalendlyButton from './components/CalendlyButton';
 
 ## How It Works
 
-1. **Server-Side API**: Makes secure API calls through `/api/calendly` route
-2. **Token Security**: Calendly token stored server-side only
-3. **User Authentication**: Fetches user profile using Calendly API v2
-4. **Event Type Detection**: Retrieves all user's event types
-5. **Smart Matching**: Looks for discovery/consultation events by name/description
-6. **Booking URL Construction**: Creates proper Calendly booking URLs
-7. **Fallback**: Opens first available event type if no discovery call found
-8. **Error Handling**: Shows error message and falls back to Calendly homepage
+1. **Direct Calendly URL**: Uses your direct Calendly booking link
+2. **Current Date**: Automatically adds current month/year to ensure up-to-date calendar
+3. **Smart URL Construction**: Builds URL with proper date parameters
+4. **Fallback**: Opens your direct Calendly URL if any issues occur
+5. **Error Handling**: Shows error message and falls back to direct URL
 
 ## Styling
 
@@ -97,7 +94,7 @@ The component uses your existing `btn-primary` class and includes:
 
 ## Security
 
-- Token is stored server-side only (not exposed to client)
-- All API calls go through secure server-side route
-- No sensitive data is logged or exposed to browser
-- Environment variables are properly protected 
+- No API tokens required - uses direct Calendly URLs
+- No sensitive data stored or transmitted
+- Simple and secure direct link approach
+- No server-side API calls needed 

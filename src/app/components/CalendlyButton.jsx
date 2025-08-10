@@ -37,43 +37,27 @@ export default function CalendlyButton({
     setError(null);
 
     try {
-      // If eventType is provided, use it directly
-      if (eventType) {
-        window.open(eventType, '_blank');
-        return;
-      }
-
-      // Fetch event types from our server-side API route
-      const response = await fetch('/api/calendly');
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch Calendly event types');
-      }
-
-      const data = await response.json();
+      // Use the direct Calendly URL if provided, otherwise use the default
+      const calendlyUrl = eventType || 'https://calendly.com/alyssarey9/30min';
       
-      if (!data.success) {
-        throw new Error(data.error || 'Failed to fetch event types');
-      }
-
-      // Open the discovery event or fallback to first available
-      if (data.discoveryEvent) {
-        // For v2 API, construct the booking URL from the event type
-        const eventTypeUri = data.discoveryEvent.uri;
-        const eventTypeId = eventTypeUri.split('/').pop();
-        const bookingUrl = `https://calendly.com/app/scheduling/${eventTypeId}`;
-        console.log('Opening Calendly booking URL:', bookingUrl);
-        window.open(bookingUrl, '_blank');
-      } else {
-        throw new Error('No event types found');
-      }
+      // Add current month/year to the URL to ensure it's up to date
+      const now = new Date();
+      const currentMonth = now.getMonth() + 1; // getMonth() returns 0-11
+      const currentYear = now.getFullYear();
+      
+      // Construct URL with current month/year parameters
+      const urlWithDate = `${calendlyUrl}?month=${currentYear}-${currentMonth.toString().padStart(2, '0')}`;
+      
+      console.log('Opening Calendly URL:', urlWithDate);
+      window.open(urlWithDate, '_blank');
+      
     } catch (err) {
       console.error('Calendly error:', err);
       setError('Unable to open scheduling. Please try again or contact us directly.');
       
-      // Fallback: open Calendly homepage
+      // Fallback: open the direct Calendly URL
       setTimeout(() => {
-        window.open('https://calendly.com', '_blank');
+        window.open('https://calendly.com/alyssarey9/30min', '_blank');
       }, 2000);
     } finally {
       setIsLoading(false);
