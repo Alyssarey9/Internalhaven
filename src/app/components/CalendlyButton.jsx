@@ -14,7 +14,7 @@ import { useState } from 'react';
  * @returns {JSX.Element} Calendly button component
  */
 export default function CalendlyButton({ 
-  text = "Schedule Your FREE Discovery Call",
+  text = "Schedule Your FREE Clarity Call",
   className = "",
   size = "medium",
   fullWidth = false,
