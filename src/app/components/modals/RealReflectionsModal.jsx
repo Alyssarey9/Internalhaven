@@ -65,15 +65,18 @@ export default function RealReflectionsModal(){
         }
     ];
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (!isTransitioning) {
-                nextTestimonial();
-            }
-        }, 6000);
+    //Removed interval to prevent auto-scroll
+    // This can be added back if desired
+    // The interval is set to 6000ms (6 seconds)
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         if (!isTransitioning) {
+    //             nextTestimonial();
+    //         }
+    //     }, 6000);
         
-        return () => clearInterval(interval);
-    }, [isTransitioning]);
+    //     return () => clearInterval(interval);
+    // }, [isTransitioning]);
 
     const nextTestimonial = () => {
         if (isTransitioning) return;
