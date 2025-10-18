@@ -5,51 +5,51 @@ import CalendlyButton from '../CalendlyButton';
 
 export default function WorkModal() {
   return (
-    <div className="p-16 ">
-      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">How I Help</h2>
-      <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
+    <div className="p-4 sm:p-8 md:p-12 lg:p-16">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 tracking-widest font-urbanist text-cotton">How I Help</h2>
+      <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-6 sm:mb-8 md:mb-10"></div>
       
-      <div className="flex flex-row gap-8 mb-10">
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-10">
         <div className="flex-1">
           <Image
             src="/images/How I Help 1.jpg"
             alt="Coaching in action"
             width={800}
             height={400}
-            className="w-full h-80 object-cover rounded-lg shadow-2xl"
+            className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg shadow-2xl"
           />
         </div>
         <div className="flex-1 flex items-center">
-          <p className="text-xl text-cotton font-medium leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-cotton font-medium leading-relaxed">
             My coaching approach blends practical tools with heart-centered guidance. I utilize proven methods, such as Jay Shetty's ABC Framework, combined with principles from Emotional Intelligence, Positive Psychology, Mindfulness, and Neuroscience, to help clients develop self-awareness and emotional strength.
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col space-y-8 text-cloud-gray font-coming-soon">
+      <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-8 text-cloud-gray font-coming-soon">
         
-        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20  p-6 rounded-lg border border-amethyst/30">
-          <h3 className="text-2xl font-bold mb-4 text-apricot font-urbanist">MY MISSION</h3>
+        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-4 sm:p-6 rounded-lg border border-amethyst/30">
+          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-apricot font-urbanist">MY MISSION</h3>
           <p>My mission is to support and empower women as they reconnect with their natural curiosity about their thoughts and emotions. Through cultivating self-love, acceptance, and confidence, I help clients navigate life’s challenges with greater clarity and resilience, leading to a life grounded in peace and aligned with purpose.</p>
         </div>
 
-        <div className="bg-gradient-to-r from-sage/20 to-dusty-rose/20 p-6 rounded-lg border border-sage/30">
-          <h3 className="text-2xl font-bold mb-4 text-sage font-urbanist">MY VISION</h3>
+        <div className="bg-gradient-to-r from-sage/20 to-dusty-rose/20 p-4 sm:p-6 rounded-lg border border-sage/30">
+          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-sage font-urbanist">MY VISION</h3>
           <p>My vision is to guide individuals in cultivating self-awareness and mindfulness, both through my life coaching services and through genuine, everyday interactions. By encouraging mindful and intentional living, I help others unlock their potential, reach meaningful goals, and create a life that feels authentic and fulfilling.</p>
         </div>
 
-        <div className="space-y-6">
-          <p className="text-lg leading-relaxed">Through a unique technique for emotional self-regulation, I’ll support my clients in understanding and releasing the emotions that may be holding them back, so they can move forward with clarity, confidence, and peace of mind.</p>
+        <div className="space-y-4 sm:space-y-6">
+          <p className="text-base sm:text-lg leading-relaxed">Through a unique technique for emotional self-regulation, I'll support my clients in understanding and releasing the emotions that may be holding them back, so they can move forward with clarity, confidence, and peace of mind.</p>
           
-          <p className="text-lg leading-relaxed">We will begin with a <span className="text-apricot font-semibold">FREE 45-minute clarity call</span>. This is a safe, supportive space where we’ll identify what’s standing in your way, like limiting beliefs, fear, or self-doubt, and outline a personalized path toward your goals, with motivation, accountability, and steady progress ensuring real transformation.</p>
+          <p className="text-base sm:text-lg leading-relaxed">We will begin with a <span className="text-apricot font-semibold">FREE 45-minute clarity call</span>. This is a safe, supportive space where we'll identify what's standing in your way, like limiting beliefs, fear, or self-doubt, and outline a personalized path toward your goals, with motivation, accountability, and steady progress ensuring real transformation.</p>
         </div>
 
-        <div className="bg-gradient-to-r from-lavender/95 to-lavender/40 p-8 rounded-lg border border-apricot/50 text-center">
-          <h4 className="text-2xl font-bold mb-4 text-amethyst font-urbanist">READY TO START YOUR TRANSFORMATION?</h4>
-          <p className="mb-6 text-lg text-black">I blend life coaching tools with personalized support to help you deepen self-awareness, master your emotions, and create meaningful, lasting change in your life</p>
+        <div className="bg-gradient-to-r from-lavender/95 to-lavender/40 p-4 sm:p-6 md:p-8 rounded-lg border border-apricot/50 text-center">
+          <h4 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-amethyst font-urbanist">READY TO START YOUR TRANSFORMATION?</h4>
+          <p className="mb-4 sm:mb-6 text-base sm:text-lg text-black">I blend life coaching tools with personalized support to help you deepen self-awareness, master your emotions, and create meaningful, lasting change in your life</p>
           <CalendlyButton 
             text="Schedule Your FREE Clarity Call"
-            size="large"
+            size="medium"
           />
           
           

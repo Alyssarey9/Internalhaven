@@ -108,14 +108,14 @@ export default function RealReflectionsModal(){
     };
 
     return (
-        <div className="p-3 md:p-6 max-w-3xl mx-auto">
+        <div className="p-4 sm:p-6 md:p-8 lg:p-12 max-w-3xl mx-auto">
             {/* Header Section */}
-            <div className="text-center mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold mb-3 tracking-widest font-urbanist text-cotton bg-gradient-to-r from-cotton to-gray-200 bg-clip-text text-transparent">
+            <div className="text-center mb-4 sm:mb-6">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 tracking-widest font-urbanist text-cotton bg-gradient-to-r from-cotton to-gray-200 bg-clip-text text-transparent">
                     REAL REFLECTIONS
                 </h2>
-                <div className="w-24 h-0.5 bg-gradient-to-r from-apricot via-sage to-apricot mx-auto mb-3 rounded-full shadow-lg"></div>
-                <p className="text-gray-400 text-md font-bold">
+                <div className="w-20 sm:w-24 h-0.5 bg-gradient-to-r from-apricot via-sage to-apricot mx-auto mb-2 sm:mb-3 rounded-full shadow-lg"></div>
+                <p className="text-gray-400 text-sm sm:text-base md:text-md font-bold">
                     Here, you’ll find heartfelt stories from amazing people who’ve taken brave steps toward healing, growth, and self-discovery. Their reflections reveal the power of inner work and the courage to grow, sharing the journey of finding peace within and embracing their true selves, just like you can.
                 </p>
             </div>
@@ -130,10 +130,10 @@ export default function RealReflectionsModal(){
                 <button 
                     onClick={prevTestimonial}
                     disabled={isTransitioning}
-                    className="absolute -left-4 md:-left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-purple-100 backdrop-blur-sm rounded-full p-2 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg border border-gray-200"
+                    className="absolute -left-3 sm:-left-4 md:-left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-purple-100 backdrop-blur-sm rounded-full p-1.5 sm:p-2 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg border border-gray-200"
                     aria-label="Previous testimonial"
                 >
-                    <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
@@ -141,42 +141,42 @@ export default function RealReflectionsModal(){
                 <button 
                     onClick={nextTestimonial}
                     disabled={isTransitioning}
-                    className="absolute -right-4 md:-right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-purple-100 backdrop-blur-sm rounded-full p-2 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg border border-gray-200"
+                    className="absolute -right-3 sm:-right-4 md:-right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-purple-100 backdrop-blur-sm rounded-full p-1.5 sm:p-2 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg border border-gray-200"
                     aria-label="Next testimonial"
                 >
-                    <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
 
                 {/* Testimonial Content */}
-                <div className={`bg-gradient-to-br from-purple-100/95 via-purple-200/95 to-purple-100/95 backdrop-blur-md rounded-xl p-4 md:p-6 shadow-xl border border-purple-300/30 transition-all duration-500 ${isTransitioning ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
+                <div className={`bg-gradient-to-br from-purple-100/95 via-purple-200/95 to-purple-100/95 backdrop-blur-md rounded-xl p-3 sm:p-4 md:p-6 shadow-xl border border-purple-300/30 transition-all duration-500 ${isTransitioning ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
                     <div className="text-center">
                         {/* Highlight Badge */}
-                        <div className="inline-block mb-4">
-                            <span className="bg-gradient-to-r from-apricot to-sage text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md">
+                        <div className="inline-block mb-3 sm:mb-4">
+                            <span className="bg-gradient-to-r from-apricot to-sage text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-semibold shadow-md">
                                 {testimonials[currentTestimonial].highlight}
                             </span>
                         </div>
 
                         {/* Testimonial Text */}
-                        <blockquote className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 italic font-light">
+                        <blockquote className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-3 sm:mb-4 italic font-light">
                             "{testimonials[currentTestimonial].content}"
                         </blockquote>
 
                         {/* Rating */}
-                        <div className="flex justify-center mb-4">
+                        <div className="flex justify-center mb-3 sm:mb-4">
                             <div className="flex space-x-0.5">
                                 {renderStars(testimonials[currentTestimonial].rating)}
                             </div>
                         </div>
 
                         {/* Author Info */}
-                        <div className="mb-2">
-                            <h4 className="text-lg font-bold text-gray-800 mb-0.5">
+                        <div className="mb-1 sm:mb-2">
+                            <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-0.5">
                                 {testimonials[currentTestimonial].name}
                             </h4>
-                            <p className="text-gray-500 font-medium text-sm">
+                            <p className="text-gray-500 font-medium text-xs sm:text-sm">
                                 {testimonials[currentTestimonial].role}
                             </p>
                         </div>
@@ -184,23 +184,23 @@ export default function RealReflectionsModal(){
                 </div>
 
                 {/* Progress Bar */}
-                <div className="mt-4 mb-3">
-                    <div className="w-full bg-gray-200 rounded-full h-1 overflow-hidden">
+                <div className="mt-3 sm:mt-4 mb-2 sm:mb-3">
+                    <div className="w-full bg-gray-200 rounded-full h-0.5 sm:h-1 overflow-hidden">
                         <div 
-                            className="bg-gradient-to-r from-apricot to-sage h-1 rounded-full transition-all duration-500 ease-out"
+                            className="bg-gradient-to-r from-apricot to-sage h-0.5 sm:h-1 rounded-full transition-all duration-500 ease-out"
                             style={{ width: `${((currentTestimonial + 1) / testimonials.length) * 100}%` }}
                         ></div>
                     </div>
                 </div>
 
                 {/* Dots Indicator */}
-                <div className="flex justify-center space-x-2">
+                <div className="flex justify-center space-x-1.5 sm:space-x-2">
                     {testimonials.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => goToTestimonial(index)}
                             disabled={isTransitioning}
-                            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 transform hover:scale-125 ${
+                            className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 transform hover:scale-125 ${
                                 index === currentTestimonial 
                                     ? 'bg-gradient-to-r from-apricot to-sage scale-125 shadow-md' 
                                     : 'bg-gray-300 hover:bg-gray-400'

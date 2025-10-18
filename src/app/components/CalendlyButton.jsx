@@ -64,11 +64,11 @@ export default function CalendlyButton({
     }
   };
 
-  // Size classes
+  // Size classes with responsive variants
   const sizeClasses = {
-    small: 'py-2 px-6 text-sm',
-    medium: 'py-3 px-8 text-base',
-    large: 'py-4 px-10 text-lg'
+    small: 'py-1.5 px-4 text-xs sm:py-2 sm:px-6 sm:text-sm',
+    medium: 'py-2 px-6 text-sm sm:py-2.5 sm:px-7 sm:text-base',
+    large: 'py-2.5 px-7 text-base sm:py-3 sm:px-8 sm:text-lg'
   };
 
   // Width classes
