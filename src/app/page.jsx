@@ -43,14 +43,14 @@ export default function Home() {
         {/* Main Content */}
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
         {/* Logo */}
-        <div className="mb-8 animate-fade-in dragonfly-container">
+        <div className="mb-8 animate-fade-in">
           <div className="w-24 h-24 rounded-full border-2 border-cotton/50 flex items-center justify-center bg-lavender/20 backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-105 hover:border-apricot">
             <Image
               src="/images/dragonfly.svg"
               alt="Internal Haven Dragonfly Logo"
               width={48}
               height={48}
-              className="w-20 h-20 text-cotton dragonfly-wings"
+              className="w-20 h-20 text-cotton"
             />
           </div>
         </div>
@@ -159,69 +159,6 @@ export default function Home() {
           }
         }
         
-        /* Dragonfly flight path animation - Figure 8 pattern */
-        @keyframes dragonfly-flight {
-          0% {
-            transform: translate(0, 0) rotate(0deg) scale(1);
-          }
-          /* Right loop - going up */
-          12.5% {
-            transform: translate(120px, -80px) rotate(45deg) scale(1.05);
-          }
-          /* Top of right loop */
-          25% {
-            transform: translate(180px, -120px) rotate(90deg) scale(1.1);
-          }
-          /* Right loop - coming down */
-          37.5% {
-            transform: translate(120px, -80px) rotate(135deg) scale(1.05);
-          }
-          /* Center crossing point */
-          50% {
-            transform: translate(0, 0) rotate(180deg) scale(1);
-          }
-          /* Left loop - going down */
-          62.5% {
-            transform: translate(-120px, 80px) rotate(225deg) scale(1.05);
-          }
-          /* Bottom of left loop */
-          75% {
-            transform: translate(-180px, 120px) rotate(270deg) scale(1.1);
-          }
-          /* Left loop - coming up */
-          87.5% {
-            transform: translate(-120px, 80px) rotate(315deg) scale(1.05);
-          }
-          /* Return to center */
-          100% {
-            transform: translate(0, 0) rotate(360deg) scale(1);
-          }
-        }
-        
-        /* Wing flapping animation - more realistic */
-        @keyframes wing-flap {
-          0% {
-            transform: rotateY(0deg) scaleX(1);
-            filter: brightness(1);
-          }
-          25% {
-            transform: rotateY(-15deg) scaleX(0.9);
-            filter: brightness(1.1);
-          }
-          50% {
-            transform: rotateY(-25deg) scaleX(0.75);
-            filter: brightness(1.2);
-          }
-          75% {
-            transform: rotateY(-15deg) scaleX(0.9);
-            filter: brightness(1.1);
-          }
-          100% {
-            transform: rotateY(0deg) scaleX(1);
-            filter: brightness(1);
-          }
-        }
-        
         .animate-fade-in {
           animation: fade-in 1s ease-out;
         }
@@ -240,23 +177,6 @@ export default function Home() {
         
         .animate-modal-content {
           animation: modal-content 0.4s ease-out;
-        }
-        
-        /* Apply dragonfly animations */
-        .dragonfly-container {
-          animation: dragonfly-flight 16s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-          animation-delay: 2s;
-          will-change: transform;
-        }
-        
-        .dragonfly-wings {
-          animation: wing-flap 0.2s ease-in-out infinite;
-          transform-style: preserve-3d;
-        }
-        
-        /* Pause animation on hover */
-        .dragonfly-container:hover {
-          animation-play-state: paused;
         }
       `}</style>
       </main>

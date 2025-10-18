@@ -108,20 +108,22 @@ export default function RealReflectionsModal(){
     };
 
     return (
-        <div className="p-4 sm:p-6 md:p-8 lg:p-12 max-w-3xl mx-auto">
+        <div className="p-4 sm:p-6 md:p-8 lg:p-12 max-w-5xl mx-auto">
             {/* Header Section */}
             <div className="text-center mb-4 sm:mb-6">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 tracking-widest font-urbanist text-cotton bg-gradient-to-r from-cotton to-gray-200 bg-clip-text text-transparent">
                     REAL REFLECTIONS
                 </h2>
                 <div className="w-20 sm:w-24 h-0.5 bg-gradient-to-r from-apricot via-sage to-apricot mx-auto mb-2 sm:mb-3 rounded-full shadow-lg"></div>
-                <p className="text-gray-400 text-sm sm:text-base md:text-md font-bold">
-                    Here, you’ll find heartfelt stories from amazing people who’ve taken brave steps toward healing, growth, and self-discovery. Their reflections reveal the power of inner work and the courage to grow, sharing the journey of finding peace within and embracing their true selves, just like you can.
-                </p>
+                <div className="text-gray-400 w-full text-md md:text-md font-bold font-urbanist">
+                    <p className="text-gray-400 w-full text-md md:text-md font-bold">
+                        Here, you’ll find heartfelt stories from amazing people who’ve taken brave steps toward healing, growth, and self-discovery. Their reflections reveal the power of inner work and the courage to grow, sharing the journey of finding peace within and embracing their true selves, just like you can.
+                    </p>
+                </div>
             </div>
             
             {/* Testimonial Carousel */}
-            <div className="relative">
+            <div className="relative max-w-3xl mx-auto">
                 {/* Background Decorative Elements */}
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-apricot/20 to-sage/20 rounded-full blur-lg"></div>
                 <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-br from-sage/20 to-apricot/20 rounded-full blur-lg"></div>
