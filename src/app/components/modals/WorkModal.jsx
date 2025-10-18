@@ -5,7 +5,7 @@ import CalendlyButton from '../CalendlyButton';
 
 export default function WorkModal() {
   return (
-    <div className="p-16">
+    <div className="p-16 ">
       <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">How I Help</h2>
       <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
@@ -44,13 +44,15 @@ export default function WorkModal() {
           <p className="text-lg leading-relaxed">We will begin with a <span className="text-apricot font-semibold">FREE 45-minute clarity call</span>. This is a safe, supportive space where we’ll identify what’s standing in your way, like limiting beliefs, fear, or self-doubt, and outline a personalized path toward your goals, with motivation, accountability, and steady progress ensuring real transformation.</p>
         </div>
 
-        <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-8 rounded-lg border border-apricot/50 text-center">
-          <h4 className="text-2xl font-bold mb-4 text-apricot font-urbanist">READY TO START YOUR TRANSFORMATION?</h4>
-          <p className="mb-6 text-lg">I blend life coaching tools with personalized support to help you deepen self-awareness, master your emotions, and create meaningful, lasting change in your life</p>
+        <div className="bg-gradient-to-r from-lavender/95 to-lavender/40 p-8 rounded-lg border border-apricot/50 text-center">
+          <h4 className="text-2xl font-bold mb-4 text-amethyst font-urbanist">READY TO START YOUR TRANSFORMATION?</h4>
+          <p className="mb-6 text-lg text-black">I blend life coaching tools with personalized support to help you deepen self-awareness, master your emotions, and create meaningful, lasting change in your life</p>
           <CalendlyButton 
             text="Schedule Your FREE Clarity Call"
             size="large"
           />
+          
+          
         </div>
       </div>
     </div>
