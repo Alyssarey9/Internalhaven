@@ -62,7 +62,7 @@ export default function Home() {
           </h1>
           <p className="text-cotton/90 text-base md:text-lg tracking-wider leading-relaxed max-w-3xl mx-auto font-coming-soon">
             Stop feeling stuck, overwhelmed, and unsure of your next step. 
-            <span className="block mt-2 text-apricot font-semibold">
+            <span className="block mt-2 text-deep-plum font-semibold">
               Discover your purpose, break through barriers, and create the fulfilling life you deserve.
             </span>
           </p>
