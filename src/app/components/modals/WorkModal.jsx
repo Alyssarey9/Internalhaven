@@ -6,24 +6,28 @@ import CalendlyButton from '../CalendlyButton';
 export default function WorkModal() {
   return (
     <div className="p-16">
-      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">MY COACHING APPROACH</h2>
+      <h2 className="text-4xl font-bold mb-6 tracking-widest font-urbanist text-cotton">How I Help</h2>
       <div className="w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-10"></div>
       
-      <div className="mb-10">
-        <Image
-          src="/images/about-me_landscape_1.jpg"
-          alt="Coaching in action"
-          width={800}
-          height={400}
-          className="w-full h-80 object-cover rounded-lg shadow-2xl"
-        />
+      <div className="flex flex-row gap-8 mb-10">
+        <div className="flex-1">
+          <Image
+            src="/images/How I Help 1.jpg"
+            alt="Coaching in action"
+            width={800}
+            height={400}
+            className="w-full h-80 object-cover rounded-lg shadow-2xl"
+          />
+        </div>
+        <div className="flex-1 flex items-center">
+          <p className="text-xl text-cotton font-medium leading-relaxed">
+            My coaching approach blends practical tools with heart-centered guidance. I utilize proven methods, such as Jay Shetty's ABC Framework, combined with principles from Emotional Intelligence, Positive Psychology, Mindfulness, and Neuroscience, to help clients develop self-awareness and emotional strength.
+          </p>
+        </div>
       </div>
 
-      <div className="space-y-8 text-cloud-gray font-coming-soon">
-        <p className="text-xl text-cotton font-medium leading-relaxed">
-          My coaching approach blends practical tools with heart-centered guidance. I utilize proven methods, such as Jay Shetty’s ABC Framework, combined with principles from Emotional Intelligence, Positive Psychology, Mindfulness, and Neuroscience, to help clients develop self-awareness and emotional strength.
-        </p>
-
+      <div className="flex flex-col space-y-8 text-cloud-gray font-coming-soon">
+        
         <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20  p-6 rounded-lg border border-amethyst/30">
           <h3 className="text-2xl font-bold mb-4 text-apricot font-urbanist">MY MISSION</h3>
           <p>My mission is to support and empower women as they reconnect with their natural curiosity about their thoughts and emotions. Through cultivating self-love, acceptance, and confidence, I help clients navigate life’s challenges with greater clarity and resilience, leading to a life grounded in peace and aligned with purpose.</p>
