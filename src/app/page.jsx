@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ClickSpark from './components/ClickSpark';
 import {
   IntroModal,
@@ -113,6 +114,7 @@ export default function Home() {
           <p className="text-cotton/60 text-xs tracking-wider uppercase font-coming-soon">
             © Internal Haven. Transform Your Life From Within.
           </p>
+          <Link href="/privacy" className="text-cotton/80 hover:text-cotton text-xs underline underline-offset-4">Privacy Policy</Link>
         </div>
         </div>
 
@@ -183,5 +185,4 @@ export default function Home() {
     </ClickSpark>
   );
 }
-
 

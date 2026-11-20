@@ -13,8 +13,6 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export async function submitFreebiesEmail(fullName, email) {
   try {
     console.log('🚀 Starting freebies email submission...');
-    console.log('📧 Email:', email);
-    console.log('👤 Full Name:', fullName);
     console.log('🔑 Supabase Key exists:', !!supabaseKey);
 
     // Basic email validation
@@ -43,7 +41,6 @@ export async function submitFreebiesEmail(fullName, email) {
       source: 'website_freebies_modal'
     };
 
-    console.log('📊 Insert data:', insertData);
 
     // Insert data into freebies_subscribers table
     console.log('🔄 Attempting Supabase insert...');
@@ -53,9 +50,7 @@ export async function submitFreebiesEmail(fullName, email) {
       .select();
 
     if (error) {
-      console.error('❌ Supabase error:', error);
       console.error('❌ Error code:', error.code);
-      console.error('❌ Error message:', error.message);
       
       // Handle unique constraint violation (email already exists)
       if (error.code === '23505') {
@@ -64,7 +59,6 @@ export async function submitFreebiesEmail(fullName, email) {
       
       // Handle RLS policy violation
       if (error.code === '42501') {
-        console.error('❌ RLS Policy Error:', error);
         return { 
           success: false, 
           error: 'Database configuration issue. Please try again or contact support.' 
@@ -74,10 +68,8 @@ export async function submitFreebiesEmail(fullName, email) {
       return { success: false, error: 'Unable to subscribe. Please try again.' };
     }
 
-    console.log('✅ Insert successful:', data);
     return { success: true, data };
   } catch (err) {
-    console.error('❌ Freebies email submission error:', err);
     return { success: false, error: 'Something went wrong. Please try again.' };
   }
 } 

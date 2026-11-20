@@ -25,6 +25,11 @@ export default function Footer() {
               Contact
             </Link>
           </div>
+          <div className="px-5 py-2">
+            <Link href="/privacy" className="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+              Privacy Policy
+            </Link>
+          </div>
         </nav>
         <p className="mt-8 text-center text-base text-gray-400">
           &copy; {new Date().getFullYear()} Internal Haven. All rights reserved.
