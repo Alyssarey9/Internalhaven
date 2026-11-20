@@ -1,9 +1,8 @@
 import Link from 'next/link';
 
-// [DRAFT COPY]
 export const metadata = {
   title: 'Privacy Policy',
-  description: 'Draft privacy policy for the Internal Haven app and coaching website.',
+  description: 'Privacy policy for the Internal Haven app and coaching website.',
   alternates: { canonical: '/privacy' },
 };
 
@@ -12,10 +11,9 @@ export default function Privacy() {
     <main className="min-h-screen bg-cotton text-midnight-ink px-5 py-10 sm:px-8 sm:py-16 font-coming-soon">
       <article className="mx-auto max-w-3xl space-y-10 leading-relaxed">
         <header className="space-y-5 border-b border-deep-plum/20 pb-8">
-          <p className="rounded-lg border border-deep-plum/30 bg-lavender/30 px-4 py-3 text-deep-plum font-semibold">Draft — pending owner review</p>
           <Link href="/" className="inline-block text-deep-plum underline underline-offset-4">← Internal Haven home</Link>
           <h1 className="font-urbanist text-4xl sm:text-5xl font-bold text-deep-plum">Privacy Policy</h1>
-          <p>Effective date: [DATE — owner to confirm]</p>
+          <p>Effective date: November 20, 2026</p>
           <p>This policy explains privacy for the Internal Haven app on iOS, iPadOS and macOS, and for our coaching website. The app and website handle information differently.</p>
         </header>
 
@@ -51,7 +49,7 @@ export default function Privacy() {
 
         <section aria-labelledby="changes" className="space-y-4">
           <h2 id="changes" className="font-urbanist text-2xl font-bold text-deep-plum">5. Changes to this policy</h2>
-          <p>We may update this policy as our services or privacy practices change. We will post the updated policy here and revise the effective date. This draft is pending owner review.</p>
+          <p>We may update this policy as our services or privacy practices change. We will post the updated policy here and revise the effective date.</p>
         </section>
 
         <section aria-labelledby="contact" className="space-y-4 border-t border-deep-plum/20 pt-8">
