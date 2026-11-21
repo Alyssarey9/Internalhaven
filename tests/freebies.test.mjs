@@ -55,14 +55,12 @@ test('rejects empty, malformed, oversized and invalid input before any side effe
   assert.equal((await handler(new Request('http://localhost', { method: 'POST', body: '{' }))).status, 400);
 });
 
-test('duplicate still sends but keeps the existing user-facing error', async () => {
+test('duplicate sends nothing and keeps the existing user-facing error', async () => {
   const { handler, sent } = setup({ insertError: { code: '23505' } });
   assert.deepEqual(await (await handler(request(signup))).json(), {
     success: false, error: 'This email is already subscribed to our freebies!',
   });
-  assert.equal(sent.length, 1);
-  assert.equal(sent[0].scheduledAt, undefined);
-  assert.equal(sent[0].attachments[0].filename, 'Intro to Life Coaching Workbook.pdf');
+  assert.equal(sent.length, 0);
 });
 
 test('database errors do not send email or log private details', async () => {

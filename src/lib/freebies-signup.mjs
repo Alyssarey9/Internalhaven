@@ -26,6 +26,9 @@ export function createFreebiesHandler({ insert, sendEmail, warn = console.warn, 
       return Response.json({ success: false, error: 'Something went wrong. Please try again.' }, { status: 500 });
     }
     const duplicate = error?.code === '23505';
+    if (duplicate) {
+      return Response.json({ success: false, error: 'This email is already subscribed to our freebies!' });
+    }
     if (error && !duplicate) {
       warn('Freebies signup: database insert failed.');
       return Response.json({
@@ -37,16 +40,13 @@ export function createFreebiesHandler({ insert, sendEmail, warn = console.warn, 
     }
 
     const messages = buildFreebiesEmails(fullName, email, signupAt);
-    for (const message of duplicate ? messages.slice(0, 1) : messages) {
+    for (const message of messages) {
       try {
         const result = await sendEmail(message);
         if (result?.error) warn('Freebies email: delivery or scheduling failed.');
       } catch {
         warn('Freebies email: delivery or scheduling failed.');
       }
-    }
-    if (duplicate) {
-      return Response.json({ success: false, error: 'This email is already subscribed to our freebies!' });
     }
     return Response.json({ success: true });
   };
