@@ -73,11 +73,10 @@ export default function FreebiesModal() {
           {submitStatus === 'success' ? (
               <div className="text-center p-6 bg-green-100 border border-green-300 rounded-lg">
                 <h5 className="text-green-800 font-semibold mb-2">🎉 Thank you for subscribing!</h5>
-                <p className="text-green-700 text-sm">Check your email for your FREE life coaching tools. We&apos;ve sent you:</p>
+                <p className="text-green-700 text-sm">Your FREE workbook is on its way now! Your three coaching tools will follow in a week, with a gentle check-in the week after.</p>
                 <ul className="text-green-700 text-sm mt-2 space-y-1">
-                  <li>• Curious About Life Coaching? Start Here!</li>
-                  <li>• Your Mindfulness Starter Kit</li>
-                  <li>• How to Be Your Own Bestie Guide</li>
+                  <li>• Intro to Life Coaching Workbook (now)</li>
+                  <li>• How to Be Your Own Bestie!</li>
                   <li>• Tips to Cultivate a Growth Mindset</li>
                   <li>• Emotion Self-Regulation Technique</li>
                 </ul>
