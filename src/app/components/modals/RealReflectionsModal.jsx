@@ -163,7 +163,7 @@ export default function RealReflectionsModal(){
 
                         {/* Testimonial Text */}
                         <blockquote className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-3 sm:mb-4 italic font-light">
-                            "{testimonials[currentTestimonial].content}"
+                            &quot;{testimonials[currentTestimonial].content}&quot;
                         </blockquote>
 
                         {/* Rating */}

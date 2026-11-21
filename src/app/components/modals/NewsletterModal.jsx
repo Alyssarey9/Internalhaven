@@ -21,7 +21,7 @@ export default function NewsletterModal({ onClose }) {
             </div>
             <h3 className="text-2xl font-bold text-cotton mb-2 font-urbanist">Get Your Free Mindfulness Tools!</h3>
             <p className="text-cloud-gray text-sm font-coming-soon">
-              Enter your email and I'll send you 3 powerful tools to support your personal growth and cultivate mindfulness:
+              Enter your email and I&apos;ll send you 3 powerful tools to support your personal growth and cultivate mindfulness:
             </p>
           </div>
           

@@ -21,7 +21,7 @@ export default function WorkModal() {
         </div>
         <div className="flex-1 flex items-center">
           <p className="text-base sm:text-lg md:text-xl text-cotton font-medium leading-relaxed">
-            My coaching approach blends practical tools with heart-centered guidance. I utilize proven methods, such as Jay Shetty's ABC Framework, combined with principles from Emotional Intelligence, Positive Psychology, Mindfulness, and Neuroscience, to help clients develop self-awareness and emotional strength.
+            My coaching approach blends practical tools with heart-centered guidance. I utilize proven methods, such as Jay Shetty&apos;s ABC Framework, combined with principles from Emotional Intelligence, Positive Psychology, Mindfulness, and Neuroscience, to help clients develop self-awareness and emotional strength.
           </p>
         </div>
       </div>
@@ -39,9 +39,9 @@ export default function WorkModal() {
         </div>
 
         <div className="space-y-4 sm:space-y-6">
-          <p className="text-base sm:text-lg leading-relaxed">Through a unique technique for emotional self-regulation, I'll support my clients in understanding and releasing the emotions that may be holding them back, so they can move forward with clarity, confidence, and peace of mind.</p>
+          <p className="text-base sm:text-lg leading-relaxed">Through a unique technique for emotional self-regulation, I&apos;ll support my clients in understanding and releasing the emotions that may be holding them back, so they can move forward with clarity, confidence, and peace of mind.</p>
           
-          <p className="text-base sm:text-lg leading-relaxed">We will begin with a <span className="text-apricot font-semibold">FREE 45-minute clarity call</span>. This is a safe, supportive space where we'll identify what's standing in your way, like limiting beliefs, fear, or self-doubt, and outline a personalized path toward your goals, with motivation, accountability, and steady progress ensuring real transformation.</p>
+          <p className="text-base sm:text-lg leading-relaxed">We will begin with a <span className="text-apricot font-semibold">FREE 45-minute clarity call</span>. This is a safe, supportive space where we&apos;ll identify what&apos;s standing in your way, like limiting beliefs, fear, or self-doubt, and outline a personalized path toward your goals, with motivation, accountability, and steady progress ensuring real transformation.</p>
         </div>
 
         <div className="bg-gradient-to-r from-lavender/95 to-lavender/40 p-4 sm:p-6 md:p-8 rounded-lg border border-apricot/50 text-center">

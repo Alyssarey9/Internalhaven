@@ -40,11 +40,11 @@ export default function AboutModal() {
         </div>
         
         <div className="space-y-4 sm:space-y-6 text-cloud-gray leading-relaxed font-coming-soon">
-          <p className="text-lg sm:text-xl text-cotton font-medium">Hi, I'm Alyssa Rey, a certified life coach, volleyball coach, and a passionate advocate for helping women build lives full of peace, freedom, and purpose.</p>
+          <p className="text-lg sm:text-xl text-cotton font-medium">Hi, I&apos;m Alyssa Rey, a certified life coach, volleyball coach, and a passionate advocate for helping women build lives full of peace, freedom, and purpose.</p>
           
-          <p className="text-sm sm:text-base">I've always felt a deep calling to create safe, authentic spaces where people can express themselves fully and confidently. With grounded energy and easy-to-understand tools, I'm here to help you organize your life and navigate your emotions with clarity and mindfulness.</p>
+          <p className="text-sm sm:text-base">I&apos;ve always felt a deep calling to create safe, authentic spaces where people can express themselves fully and confidently. With grounded energy and easy-to-understand tools, I&apos;m here to help you organize your life and navigate your emotions with clarity and mindfulness.</p>
           
-          <p className="text-sm sm:text-base">Whether it's gaining confidence, finding balance, or simply making time for yourself, we'll work together to create meaningful shifts that last.</p>
+          <p className="text-sm sm:text-base">Whether it&apos;s gaining confidence, finding balance, or simply making time for yourself, we&apos;ll work together to create meaningful shifts that last.</p>
           
           <div className="flex-shrink-0">
             <Image
@@ -103,14 +103,14 @@ export default function AboutModal() {
         </div>
 
         <div className="bg-gradient-to-r from-sage/20 to-dusty-rose/20 p-4 sm:p-6 rounded-lg border border-sage/30 mt-6 sm:mt-8">
-          <p className="text-base sm:text-lg leading-relaxed">I earned my life coaching certification from the Jay Shetty Certification School in 2023. Since then, I've had the privilege of guiding friends, peers, and family members through my personalized coaching approach. I also serve as an assistant volleyball coach at my alma mater, Alonzo & Tracy Mourning Senior High, where I've supported over 40 high school athletes, both girls and boys, using a blend of mindset coaching and emotional support. Outside of school, I coach an energetic group of 13-year-olds with Playeros, a volleyball club based in Miami Beach, FL.</p>
+          <p className="text-base sm:text-lg leading-relaxed">I earned my life coaching certification from the Jay Shetty Certification School in 2023. Since then, I&apos;ve had the privilege of guiding friends, peers, and family members through my personalized coaching approach. I also serve as an assistant volleyball coach at my alma mater, Alonzo & Tracy Mourning Senior High, where I&apos;ve supported over 40 high school athletes, both girls and boys, using a blend of mindset coaching and emotional support. Outside of school, I coach an energetic group of 13-year-olds with Playeros, a volleyball club based in Miami Beach, FL.</p>
         </div>
 
         <p className="text-sm sm:text-base">Growth is a core value in everything I do. In 2022, I stretched outside my comfort zone by learning to play the drums, an experience that reminded me of the power of curiosity and consistent practice. I draw inspiration from nature and consider myself a lifelong student, committed to bringing presence, purpose, and authenticity into every interaction.</p>
 
         <div className="bg-gradient-to-r from-apricot/20 to-dusty-rose/20 p-4 sm:p-6 md:p-8 rounded-lg border border-apricot/50 text-center mt-6 sm:mt-8 md:mt-10">
           <h4 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-apricot font-urbanist">Ready to take the first step?</h4>
-          <p className="text-base sm:text-lg mb-4 sm:mb-6">Let's connect for a FREE clarity call and start your path toward a life you love!</p>
+          <p className="text-base sm:text-lg mb-4 sm:mb-6">Let&apos;s connect for a FREE clarity call and start your path toward a life you love!</p>
           <CalendlyButton 
             text="Schedule Your FREE Clarity Call"
             size="medium"

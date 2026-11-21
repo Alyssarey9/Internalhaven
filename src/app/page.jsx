@@ -93,7 +93,7 @@ export default function Home() {
             onClick={() => setActiveModal('contact')}
             className="btn-primary"
           >
-            <span className="relative z-10">LET'S CONNECT</span>
+            <span className="relative z-10">LET&apos;S CONNECT</span>
           </button>
           <button
             onClick={() => setActiveModal('freebies')}
@@ -185,4 +185,3 @@ export default function Home() {
     </ClickSpark>
   );
 }
-

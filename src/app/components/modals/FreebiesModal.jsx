@@ -73,7 +73,7 @@ export default function FreebiesModal() {
           {submitStatus === 'success' ? (
               <div className="text-center p-6 bg-green-100 border border-green-300 rounded-lg">
                 <h5 className="text-green-800 font-semibold mb-2">🎉 Thank you for subscribing!</h5>
-                <p className="text-green-700 text-sm">Check your email for your FREE life coaching tools. We've sent you:</p>
+                <p className="text-green-700 text-sm">Check your email for your FREE life coaching tools. We&apos;ve sent you:</p>
                 <ul className="text-green-700 text-sm mt-2 space-y-1">
                   <li>• Curious About Life Coaching? Start Here!</li>
                   <li>• Your Mindfulness Starter Kit</li>
@@ -146,11 +146,11 @@ export default function FreebiesModal() {
         <div className="space-y-3 sm:space-y-4">
           <div>
             <h4 className="text-base sm:text-lg md:text-xl mb-2 font-urbanist text-apricot">Your Mindfulness Starter Kit</h4>
-            <p className="text-sm sm:text-base md:text-lg">Unlock your full potential with these 3 powerful life coaching tools that will help support your personal growth and cultivate more mindfulness into your daily habits and actions. Whether it's enhancing emotional intelligence or building a positive mindset, these tools are here to guide you on a journey of self-discovery and transformation. Explore them on my website and take the first step toward a more empowered, fulfilling life!</p>
+            <p className="text-sm sm:text-base md:text-lg">Unlock your full potential with these 3 powerful life coaching tools that will help support your personal growth and cultivate more mindfulness into your daily habits and actions. Whether it&apos;s enhancing emotional intelligence or building a positive mindset, these tools are here to guide you on a journey of self-discovery and transformation. Explore them on my website and take the first step toward a more empowered, fulfilling life!</p>
           </div>
           <div>
             <h5 className="text-sm sm:text-base md:text-lg mb-1 sm:mb-2 font-urbanist text-sage">How to be Your Own Bestie</h5>
-            <p className="text-sm sm:text-base">Unlock the secrets to building a loving, supportive relationship with yourself. This empowering coaching tool guides you through practical steps to boost self-love, nurture your inner dialogue, and show up for yourself like your own biggest cheerleader. It's time to embrace the best friend you already have, YOU!</p>
+            <p className="text-sm sm:text-base">Unlock the secrets to building a loving, supportive relationship with yourself. This empowering coaching tool guides you through practical steps to boost self-love, nurture your inner dialogue, and show up for yourself like your own biggest cheerleader. It&apos;s time to embrace the best friend you already have, YOU!</p>
           </div>
           <div>
             <h5 className="text-sm sm:text-base md:text-lg mb-1 sm:mb-2 font-urbanist text-sage">Tips to Cultivate a Growth Mindset</h5>
@@ -158,7 +158,7 @@ export default function FreebiesModal() {
           </div>
           <div>
             <h5 className="text-sm sm:text-base md:text-lg mb-1 sm:mb-2 font-urbanist text-sage">Emotion Self-Regulation Guide</h5>
-            <p className="text-sm sm:text-base">Master your emotions with this transformative coaching tool. Learn simple, effective strategies to stay calm under pressure, navigate difficult feelings, and respond to life's challenges with confidence and clarity. Take control of your emotional well-being today!</p>
+            <p className="text-sm sm:text-base">Master your emotions with this transformative coaching tool. Learn simple, effective strategies to stay calm under pressure, navigate difficult feelings, and respond to life&apos;s challenges with confidence and clarity. Take control of your emotional well-being today!</p>
           </div>
         </div>
 
@@ -166,9 +166,9 @@ export default function FreebiesModal() {
          
           
           <div className="space-y-3 sm:space-y-4">
-            <p className="pb-3 sm:pb-4 text-sm sm:text-base">With How to Be Your Own Bestie, you'll build a stronger foundation of self-love and inner support. Then, dive into Tips to Cultivate a Growth Mindset to open yourself up to new possibilities and embrace your full potential. Finally, the Emotion Self-Regulation Guide will equip you with practical tools to navigate life's emotional ups and downs with confidence and clarity.</p>
+            <p className="pb-3 sm:pb-4 text-sm sm:text-base">With How to Be Your Own Bestie, you&apos;ll build a stronger foundation of self-love and inner support. Then, dive into Tips to Cultivate a Growth Mindset to open yourself up to new possibilities and embrace your full potential. Finally, the Emotion Self-Regulation Guide will equip you with practical tools to navigate life&apos;s emotional ups and downs with confidence and clarity.</p>
             <p className="font-semibold text-apricot flex justify-center text-sm sm:text-base">These tools are just the BEGINNING!</p>
-            <p className="text-sm sm:text-base">Let's work together to create a life of peace, purpose, and self-empowerment. Ready to take the next step?</p>
+            <p className="text-sm sm:text-base">Let&apos;s work together to create a life of peace, purpose, and self-empowerment. Ready to take the next step?</p>
             
             <div className="pt-1 sm:pt-2 flex justify-center">
               <CalendlyButton 

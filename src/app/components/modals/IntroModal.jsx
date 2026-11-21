@@ -47,7 +47,7 @@ export default function IntroModal() {
         </div>
 
         <p className="text-xl sm:text-2xl md:text-3xl text-sage font-medium font-urbanist italic text-center py-3 sm:py-4">
-          It's time to make yourself & your growth a priority.
+          It&apos;s time to make yourself & your growth a priority.
         </p>
 
         <div className="mt-6 sm:mt-8 md:mt-10 flex justify-center">

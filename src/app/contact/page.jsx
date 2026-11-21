@@ -16,7 +16,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl dark:text-gray-300">
-              We're here to answer your questions and help you begin your journey to personal transformation.
+              We&apos;re here to answer your questions and help you begin your journey to personal transformation.
             </p>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function Contact() {
                   How many coaching sessions will I need?
                 </dt>
                 <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                  The number of sessions varies depending on your goals and situation. Some clients achieve their desired results in just a few sessions, while others benefit from ongoing support over several months. We'll discuss this during your free consultation.
+                  The number of sessions varies depending on your goals and situation. Some clients achieve their desired results in just a few sessions, while others benefit from ongoing support over several months. We&apos;ll discuss this during your free consultation.
                 </dd>
               </div>
               <div>
@@ -214,7 +214,7 @@ export default function Contact() {
               </div>
               <div>
                 <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
-                  What's the difference between coaching and therapy?
+                  What&apos;s the difference between coaching and therapy?
                 </dt>
                 <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
                   While there can be some overlap, coaching typically focuses on present challenges and future goals, helping you move forward through action-oriented strategies. Therapy often deals more with healing past trauma and addressing clinical mental health concerns.
@@ -233,7 +233,7 @@ export default function Contact() {
                   What if I need to reschedule a session?
                 </dt>
                 <dd className="mt-2 text-base text-gray-500 dark:text-gray-300">
-                  We understand that life happens. We ask for 24 hours' notice for rescheduling, but we're flexible and will work with you to find a suitable alternative time whenever possible.
+                  We understand that life happens. We ask for 24 hours&apos; notice for rescheduling, but we&apos;re flexible and will work with you to find a suitable alternative time whenever possible.
                 </dd>
               </div>
             </dl>

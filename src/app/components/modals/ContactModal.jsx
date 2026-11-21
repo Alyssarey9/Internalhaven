@@ -5,7 +5,7 @@ import CalendlyButton from '../CalendlyButton';
 export default function ContactModal() {
   return (
     <div className="p-4 sm:p-8 md:p-12 lg:p-16">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 tracking-widest font-urbanist text-cotton">Let's Connect</h2>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 tracking-widest font-urbanist text-cotton">Let&apos;s Connect</h2>
       <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-apricot to-sage mb-6 sm:mb-8 md:mb-10"></div>
       
       <div className="space-y-4 sm:space-y-6 md:space-y-8 text-cloud-gray font-coming-soon">
@@ -13,8 +13,8 @@ export default function ContactModal() {
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-apricot font-urbanist">One-on-One Life Coaching Sessions</h3>
           <p className="text-base sm:text-lg mb-3 sm:mb-4">In our personalized, one-on-one coaching relationship, I am dedicated to supporting you on your path to becoming the best version of yourself! Through empowerment and guidance, we work together to expand your self-awareness, foster deep self-love, and unlock the immense power that resides within you!</p>
           <p className="mb-4 sm:mb-6">The one-on-one coaching journey will begin with a <span className="text-apricot font-semibold">FREE clarity call</span>, where we focus on building a trusting, honest connection. I create a safe, non-judgmental space where you can be yourself. We will establish clear expectations to ensure our time together is effective and meaningful.</p>
-          <p className="mb-4 sm:mb-6">In our work together, I'll guide you through open, reflective questions that help you better understand yourself and what might be holding you back, whether it's fear, self-doubt, or old patterns. With compassion and steady support, we'll uncover what's truly important to you and explore new, meaningful steps toward the life you're ready to create.</p>
-          <p className="mb-4 sm:mb-6">Real transformation happens when you start applying these insights to your everyday life. With continued support, reflection, and accountability, you'll begin to make meaningful progress toward a life filled with purpose, clarity, and fulfillment. I'm here to walk alongside you, because you don't have to do this alone.</p>
+          <p className="mb-4 sm:mb-6">In our work together, I&apos;ll guide you through open, reflective questions that help you better understand yourself and what might be holding you back, whether it&apos;s fear, self-doubt, or old patterns. With compassion and steady support, we&apos;ll uncover what&apos;s truly important to you and explore new, meaningful steps toward the life you&apos;re ready to create.</p>
+          <p className="mb-4 sm:mb-6">Real transformation happens when you start applying these insights to your everyday life. With continued support, reflection, and accountability, you&apos;ll begin to make meaningful progress toward a life filled with purpose, clarity, and fulfillment. I&apos;m here to walk alongside you, because you don&apos;t have to do this alone.</p>
           
           <div className="text-center">
             <CalendlyButton 
@@ -23,8 +23,8 @@ export default function ContactModal() {
             />
             
             <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-apricot/30">
-              <h4 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-apricot font-urbanist">Let's Start the Conversation</h4>
-              <p className="mt-3 sm:mt-5 pb-3 sm:pb-5 text-sm sm:text-base">Whether you're exploring life coaching for the first time or looking to deepen your personal growth journey, your questions are always welcome here. I believe that connection begins with curiosity. If there's something you'd like to know about my coaching approach, services, or how we can work together, click the button below to send me a message. I'll get back to you as soon as possible with the guidance you need.</p>
+              <h4 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-apricot font-urbanist">Let&apos;s Start the Conversation</h4>
+              <p className="mt-3 sm:mt-5 pb-3 sm:pb-5 text-sm sm:text-base">Whether you&apos;re exploring life coaching for the first time or looking to deepen your personal growth journey, your questions are always welcome here. I believe that connection begins with curiosity. If there&apos;s something you&apos;d like to know about my coaching approach, services, or how we can work together, click the button below to send me a message. I&apos;ll get back to you as soon as possible with the guidance you need.</p>
               <a 
                 href="mailto:alyssa@internalhaven.com?subject=Life Coaching Inquiry&body=Hi Alyssa,%0D%0A%0D%0AI'm interested in learning more about your life coaching services.%0D%0A%0D%0A[Please share your message here]"
                 className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 bg-apricot/20 hover:bg-apricot/30 text-apricot font-medium rounded-lg transition-colors duration-200 border border-apricot/40 mt-3 sm:mt-5 text-sm sm:text-base"
