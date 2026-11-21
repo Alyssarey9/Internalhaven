@@ -44,10 +44,9 @@ export async function submitFreebiesEmail(fullName, email) {
 
     // Insert data into freebies_subscribers table
     console.log('🔄 Attempting Supabase insert...');
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('freebies_subscribers')
-      .insert([insertData])
-      .select();
+      .insert([insertData]);
 
     if (error) {
       console.error('❌ Error code:', error.code);
@@ -68,7 +67,7 @@ export async function submitFreebiesEmail(fullName, email) {
       return { success: false, error: 'Unable to subscribe. Please try again.' };
     }
 
-    return { success: true, data };
+    return { success: true };
   } catch (err) {
     return { success: false, error: 'Something went wrong. Please try again.' };
   }
