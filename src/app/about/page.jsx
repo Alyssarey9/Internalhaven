@@ -55,13 +55,13 @@ export default function About() {
             <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">Our Story</h2>
             <div className="mt-6 prose prose-blue prose-lg text-gray-500 mx-auto dark:text-gray-300">
               <p>
-                Internal Haven was founded with a simple mission: to help individuals navigate life's challenges and discover their true potential. Our founder, after experiencing personal transformation through coaching, was inspired to create a practice dedicated to helping others achieve similar breakthroughs.
+                Internal Haven was founded with a simple mission: to help individuals navigate life&apos;s challenges and discover their true potential. Our founder, after experiencing personal transformation through coaching, was inspired to create a practice dedicated to helping others achieve similar breakthroughs.
               </p>
               <p>
-                What began as a small coaching practice has grown into a comprehensive life coaching service that has helped hundreds of clients transform their lives. We've seen firsthand the power of personalized coaching to create lasting change, and we're passionate about sharing that experience with others.
+                What began as a small coaching practice has grown into a comprehensive life coaching service that has helped hundreds of clients transform their lives. We&apos;ve seen firsthand the power of personalized coaching to create lasting change, and we&apos;re passionate about sharing that experience with others.
               </p>
               <p>
-                Our name, "Internal Haven," reflects our belief that within each person lies a sanctuary of strength, wisdom, and resilience. Our job as coaches is to help you access that internal haven and use it as a foundation for creating the life you desire.
+                Our name, &quot;Internal Haven,&quot; reflects our belief that within each person lies a sanctuary of strength, wisdom, and resilience. Our job as coaches is to help you access that internal haven and use it as a foundation for creating the life you desire.
               </p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span className="block">Ready to begin your journey?</span>
-            <span className="block text-blue-200">Let's take the first step together.</span>
+            <span className="block text-blue-200">Let&apos;s take the first step together.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">

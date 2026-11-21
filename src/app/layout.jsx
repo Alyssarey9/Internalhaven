@@ -113,13 +113,13 @@ export const metadata = {
     google: "", // "google-site-verification=..."
     other: { me: ["mailto:" + BUSINESS_EMAIL] },
   },
-  // Optional viewport (Next sets a good default, keep if you want to be explicit)
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    viewportFit: "cover",
-    themeColor: "#0b0b0b",
-  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#0b0b0b",
 };
 
 export default function RootLayout({ children }) {

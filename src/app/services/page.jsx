@@ -33,7 +33,7 @@ export default function Services() {
                     Personal Development Coaching
                   </h2>
                   <p className="mt-3 text-lg text-gray-500 dark:text-gray-300">
-                    Our personal development coaching helps you gain clarity about who you are, what you want, and how to get there. We'll work together to identify your strengths, overcome limiting beliefs, and develop strategies for personal growth.
+                    Our personal development coaching helps you gain clarity about who you are, what you want, and how to get there. We&apos;ll work together to identify your strengths, overcome limiting beliefs, and develop strategies for personal growth.
                   </p>
                   <div className="mt-5">
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Key Benefits:</h3>
@@ -81,7 +81,7 @@ export default function Services() {
                     Career Coaching
                   </h2>
                   <p className="mt-3 text-lg text-gray-500 dark:text-gray-300">
-                    Our career coaching helps you navigate career transitions, advance in your current role, or find greater satisfaction and purpose in your work. We'll explore your interests, strengths, and values to align your career with your life goals.
+                    Our career coaching helps you navigate career transitions, advance in your current role, or find greater satisfaction and purpose in your work. We&apos;ll explore your interests, strengths, and values to align your career with your life goals.
                   </p>
                   <div className="mt-5">
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Key Benefits:</h3>
@@ -129,7 +129,7 @@ export default function Services() {
                     Life Balance Coaching
                   </h2>
                   <p className="mt-3 text-lg text-gray-500 dark:text-gray-300">
-                    Our life balance coaching helps you create harmony among all aspects of your life—work, relationships, health, and personal growth. We'll identify areas of imbalance and develop strategies to create a more fulfilled and sustainable lifestyle.
+                    Our life balance coaching helps you create harmony among all aspects of your life—work, relationships, health, and personal growth. We&apos;ll identify areas of imbalance and develop strategies to create a more fulfilled and sustainable lifestyle.
                   </p>
                   <div className="mt-5">
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white">Key Benefits:</h3>
