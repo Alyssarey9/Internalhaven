@@ -12,6 +12,7 @@ const request = (input) => new Request('http://localhost/api/freebies', {
 function setup({ insertError = null, insertThrows = false, sendError = false, sendThrows = false } = {}) {
   const inserted = [], sent = [], warnings = [];
   const handler = createFreebiesHandler({
+    unsubscribeSecret: () => 'test-secret',
     now: () => signupAt,
     insert: async (data) => {
       inserted.push(data);
@@ -37,9 +38,9 @@ test('normalizes signup, inserts fixed fields and sends only to submitted addres
   assert.deepEqual(sent[0].to, ['devin@example.com']);
   assert.notEqual(sent[0].subject, 'Ignore me');
   assert.equal(sent.length, 3);
-  assert.equal(sent[0].scheduledAt, undefined);
+  assert.equal(sent[2].scheduledAt, undefined);
   assert.equal(sent[1].scheduledAt, '2026-11-28T12:00:00.000Z');
-  assert.equal(sent[2].scheduledAt, '2026-12-05T12:00:00.000Z');
+  assert.equal(sent[0].scheduledAt, '2026-12-05T12:00:00.000Z');
 });
 
 test('rejects empty, malformed, oversized and invalid input before any side effects', async () => {
@@ -91,7 +92,7 @@ test('missing Resend key logs only a static warning and signup succeeds', async 
   });
   const warnings = [];
   t.mock.method(console, 'warn', (message) => warnings.push(message));
-  const handler = createFreebiesHandler({ insert: async () => ({ error: null }), sendEmail: sendFreebiesEmail });
+  const handler = createFreebiesHandler({ insert: async () => ({ error: null }), sendEmail: sendFreebiesEmail, unsubscribeSecret: () => 'test-secret' });
   assert.deepEqual(await (await handler(request(signup))).json(), { success: true });
   assert.deepEqual(warnings, Array(3).fill('Freebies email: RESEND_API_KEY missing; delivery skipped.'));
 });
@@ -110,9 +111,12 @@ test('templates escape HTML names, attach the fixed PDFs and include CTA and pri
       assert.equal(decodeURIComponent(new URL(attachment.path).pathname), `/tools/${attachment.filename}`);
     }
     assert.match(message.text, /https:\/\/calendly.com\/alyssarey9\/60min/);
-    assert.match(message.html, /Book your free clarity call<\/a>/);
+    assert.match(message.html, /Book a free 45-minute clarity call<\/a>/);
     assert.match(message.text, /https:\/\/www.internalhaven.com\/privacy/);
-    assert.match(message.text, /Reply to this email/);
+    assert.match(message.text, /If you're in crisis, call or text 988/);
+    assert.match(message.text, /\[Mailing address — owner to confirm\]/);
   }
   assert.match(buildFreebiesEmails('', 'devin@example.com')[0].text, /^Hi friend,/);
+  for (const message of messages.slice(0, 2)) assert.match(message.text, /These are coaching tools/);
+  assert.doesNotMatch(messages[2].text, /These are coaching tools/);
 });

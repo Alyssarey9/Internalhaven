@@ -1,6 +1,7 @@
 import { buildFreebiesEmails } from './freebies-email.mjs';
+import { withUnsubscribe } from './freebies-unsubscribe.mjs';
 
-export function createFreebiesHandler({ insert, sendEmail, warn = console.warn, now = () => new Date() }) {
+export function createFreebiesHandler({ insert, sendEmail, warn = console.warn, now = () => new Date(), unsubscribeSecret = () => process.env.FREEBIES_UNSUBSCRIBE_SECRET }) {
   return async function POST(request) {
     let input;
     try {
@@ -40,10 +41,14 @@ export function createFreebiesHandler({ insert, sendEmail, warn = console.warn, 
     }
 
     const messages = buildFreebiesEmails(fullName, email, signupAt);
-    for (const message of messages) {
+    const secret = unsubscribeSecret();
+    if (!secret) warn('Freebies email: unsubscribe secret missing; unsubscribe links omitted.');
+    const scheduledIds = [];
+    for (const message of messages.reverse()) {
       try {
-        const result = await sendEmail(message);
+        const result = await sendEmail(withUnsubscribe(message, scheduledIds, secret));
         if (result?.error) warn('Freebies email: delivery or scheduling failed.');
+        else if (message.scheduledAt && result?.data?.id) scheduledIds.push(result.data.id);
       } catch {
         warn('Freebies email: delivery or scheduling failed.');
       }
